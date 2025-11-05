@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vince Carol & Associates (VCA)</title>
+  <meta name="description" content="VCA builds modern brand infrastructure for creators, founders, and institutions — strategy to microfilms, partnerships to measurable growth." />
+  <meta property="og:title" content="Vince Carol & Associates (VCA)" />
+  <meta property="og:description" content="Brand infrastructure. Real polish. Real pipeline. Real growth." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vincecarolandassociates.com" />
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <style>
+    :root{
+      --bg1:#0b1220; --bg2:#0e1730; --gold:#d6b15f; --text:#e9edf7; --muted:#a7b1c6; --card:#0f182c; --ring:rgba(214,177,95,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text); background: radial-gradient(1200px 800px at 80% -10%, #18233d 0%, transparent 60%), 
+                 radial-gradient(900px 700px at 0% 100%, #131d33 0%, transparent 60%), linear-gradient(180deg,var(--bg1),var(--bg2));
+      display:grid; place-items:center;
+    }
+    .wrap{max-width:960px; width:100%; padding:32px}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.06);
+      box-shadow: 0 20px 60px rgba(0,0,0,.45);
+      border-radius:28px; padding:36px 28px; display:grid; gap:26px; justify-items:center;
+      backdrop-filter: blur(6px);
+      animation: rise .7s ease-out both;
+    }
+    @keyframes rise{from{transform:translateY(14px); opacity:0} to{transform:translateY(0); opacity:1}}
+    .mark{
+      height:82px; width:82px; border-radius:22px; display:grid; place-items:center;
+      background: radial-gradient(80% 80% at 30% 20%, #ffe7a5 0%, #e9c978 30%, #d2ad57 55%, #b48c3a 100%);
+      color:#0b0f1a; font-weight:800; font-size:34px; letter-spacing:.5px; box-shadow: 0 0 0 10px var(--ring), 0 20px 50px rgba(0,0,0,.35);
+    }
+    h1{margin:0; font-size:clamp(28px, 4.4vw, 44px); line-height:1.05; text-align:center}
+    .sub{max-width:720px; text-align:center; color:var(--muted); font-size:clamp(14px, 1.7vw, 16px)}
+    .cta{display:flex; flex-wrap:wrap; gap:12px; justify-content:center}
+    .btn{
+      appearance:none; border:1px solid rgba(255,255,255,.12); background:#121b31; color:var(--text);
+      padding:12px 18px; border-radius:12px; font-weight:600; text-decoration:none; transition:.2s transform, .2s box-shadow, .2s background, .2s border-color;
+    }
+    .btn:hover{transform:translateY(-1px); box-shadow:0 10px 24px rgba(0,0,0,.35); border-color:rgba(255,255,255,.22)}
+    .btn.gold{background:var(--gold); color:#0b0f1a; border-color:transparent}
+    .btn.ghost{background:transparent}
+    .mini{color:var(--muted); font-size:12.5px; text-align:center}
+    .pill{display:inline-block; font-size:12px; padding:6px 10px; border-radius:999px; background:rgba(214,177,95,.1); border:1px solid var(--ring); color:#f5e3b7}
+    .row{display:flex; gap:10px; align-items:center; justify-content:center}
+    .timer{font-variant-numeric:tabular-nums}
+    .brand{opacity:.9}
+  </style>
+
+  <!-- Auto-redirect after 5s (change target if your portal lives elsewhere) -->
+  <script>
+    let t = 5; // seconds
+    let interval;
+    const go = () => window.location.href = "/";
+    document.addEventListener("DOMContentLoaded", () => {
+      const el = document.querySelector(".timer");
+      interval = setInterval(() => {
+        t--; el.textContent = t;
+        if(t<=0){ clearInterval(interval); go(); }
+      }, 1000);
+      document.querySelector("#skip").addEventListener("click", () => { clearInterval(interval); go(); });
+    });
+  </script>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <div class="mark" aria-label="VCA">V</div>
+      <div class="row">
+        <span class="pill">Vince Carol & Associates</span>
+      </div>
+      <h1>Brand Infrastructure for Creators, Founders, and Institutions</h1>
+      <p class="sub">
+        From executive strategy and brand architecture to influencer ecosystems, microfilms, and measurable growth ops —
+        VCA builds <span class="brand">real polish</span>, <span class="brand">real pipeline</span>, and <span class="brand">real growth</span>.
+      </p>
+
+      <div class="cta">
+        <!-- If your portal will live at /app, change href="/" to "/app/" -->
+        <a class="btn gold" id="skip" href="/">Enter Portal</a>
+        <!-- Replace with your Calendly/Koala link when ready -->
+        <a class="btn" href="mailto:info@vincecarolandassociates.com?subject=VCA%20Discovery%20Call&body=Tell%20us%20about%20your%20goals%20and%20best%20times.">Book a Call</a>
+        <!-- If you have a dedicated intake URL, drop it in here -->
+        <a class="btn ghost" href="/?start=intake">Start Intake</a>
+        <a class="btn ghost" href="mailto:info@vincecarolandassociates.com">Email Us</a>
+      </div>
+
+      <div class="mini">
+        Auto-redirecting to the portal in <span class="timer">5</span>s…
+      </div>
+    </section>
+
+    <p class="mini" style="margin-top:16px;">
+      © 2025 Vince Carol & Associates. All rights reserved.
+    </p>
+  </main>
+</body>
+</html>
