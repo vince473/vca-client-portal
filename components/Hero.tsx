@@ -21,7 +21,7 @@ const Hero: React.FC<{ onOpen: () => void }> = ({ onOpen }) => (
             Start an Intake
           </button>
           <a
-            href={CALENDLY_URL}
+            href="https://calendar.app.google/MU1pqrVkdJfxuPsc6"
             target="_blank"
             rel="noreferrer"
             className="bg-transparent border-2 border-[#D4AF37] text-white rounded-xl px-6 py-3 font-black transition-transform hover:scale-105 no-underline"
