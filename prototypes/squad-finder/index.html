@@ -1,0 +1,660 @@
+<title>Squad Finder</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: a phone-sized app on a storm-dark stage, with a screen map beside it for reviewers. Single dark look by design. */
+:root{
+  --void:#060507;      /* stage black */
+  --ash:#0f0c10;       /* app surface */
+  --ash-2:#18131a;     /* raised surface */
+  --line:#2c2128;      /* hairlines, red-biased */
+  --text:#efe9f1;
+  --dim:#958b98;
+  --blood:#e0102e;     /* primary red */
+  --ember:#ff4458;     /* hover / hot red */
+  --volt:#c9b6ff;      /* lightning */
+  --volt-core:#ffffff;
+  --good:#3fd99a;
+  --warn:#ffb547;
+  --f-display:"Saira Extra Condensed","Arial Narrow",Impact,sans-serif;
+  --f-body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{background:var(--void);color:var(--text);font-family:var(--f-body);font-size:15px;line-height:1.45;
+  background-image:radial-gradient(1200px 600px at 70% -10%,rgba(224,16,46,.18),transparent 60%),radial-gradient(800px 500px at 0% 110%,rgba(201,182,255,.08),transparent 60%);
+  background-attachment:fixed}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--volt);outline-offset:2px}
+
+.stage{display:grid;grid-template-columns:300px 400px;gap:40px;justify-content:center;align-items:start;
+  padding-block:32px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* ---------- reviewer screen map ---------- */
+.map{position:sticky;top:32px;display:flex;flex-direction:column;gap:18px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand svg{width:26px;height:26px;filter:drop-shadow(0 0 8px rgba(201,182,255,.7))}
+.brand b{font-family:var(--f-display);font-size:30px;letter-spacing:.04em;line-height:1;text-transform:uppercase}
+.brand b span{color:var(--blood)}
+.map p{margin:0;color:var(--dim);font-size:13.5px}
+.map h3{margin:0;font-family:var(--f-display);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--volt)}
+.screens{display:flex;flex-direction:column;gap:4px}
+.screens button{display:grid;grid-template-columns:22px 1fr;gap:8px;text-align:left;background:none;border:1px solid transparent;border-radius:6px;padding:8px 10px;color:var(--text)}
+.screens button i{font-style:normal;font-family:var(--f-mono);font-size:11px;color:var(--dim);padding-top:2px}
+.screens button span{display:block;font-weight:600}
+.screens button small{display:block;color:var(--dim);font-size:12.5px;line-height:1.35}
+.screens button:hover{border-color:var(--line);background:var(--ash)}
+.screens button[aria-current="true"]{border-color:var(--blood);background:linear-gradient(90deg,rgba(224,16,46,.16),transparent)}
+.walk{border:1px solid var(--volt);background:rgba(201,182,255,.08);color:var(--text);border-radius:6px;padding:12px;font-weight:700;text-align:left}
+.walk small{display:block;font-weight:400;color:var(--dim)}
+.walk:hover{background:rgba(201,182,255,.16)}
+
+/* ---------- device ---------- */
+.device{width:400px;height:840px;max-height:calc(100vh - 64px);min-height:640px;border-radius:38px;padding:10px;background:linear-gradient(160deg,#2a1d22,#0b090c 40%,#1b1218);
+  box-shadow:0 0 0 1px #3a2a31,0 30px 80px rgba(0,0,0,.7),0 0 60px rgba(224,16,46,.15)}
+.app{position:relative;height:100%;border-radius:30px;overflow:hidden;background:var(--ash);display:flex;flex-direction:column}
+#bolt{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:30}
+.flash{position:absolute;inset:0;pointer-events:none;z-index:29;background:var(--volt);opacity:0}
+.flash.on{animation:flash .55s ease-out}
+@keyframes flash{0%{opacity:.35}20%{opacity:.05}30%{opacity:.22}100%{opacity:0}}
+
+.top{display:flex;align-items:center;gap:10px;padding:14px 16px 10px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#140e12,var(--ash))}
+.top .logo{width:22px;height:22px;flex:none;filter:drop-shadow(0 0 6px rgba(201,182,255,.6))}
+.top h1{margin:0;font-family:var(--f-display);font-size:24px;letter-spacing:.05em;text-transform:uppercase;line-height:1;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.iconbtn{background:none;border:1px solid var(--line);border-radius:8px;width:34px;height:34px;display:grid;place-items:center;color:var(--text);flex:none}
+.iconbtn:hover{border-color:var(--blood)}
+.me-chip{display:flex;align-items:center;gap:6px;background:var(--ash-2);border:1px solid var(--line);border-radius:20px;padding:3px 10px 3px 3px;font-size:12px;font-weight:600}
+.avatar{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-display);font-size:14px;background:linear-gradient(135deg,var(--blood),#4a0612);color:#fff;flex:none}
+
+main{flex:1;overflow-y:auto;overflow-x:hidden;padding:14px 16px 20px;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.view{display:flex;flex-direction:column;gap:14px}
+
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);background:#0b080b;padding:6px 6px 10px}
+.tabs button{background:none;border:0;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;color:var(--dim);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;position:relative}
+.tabs button svg{width:22px;height:22px}
+.tabs button[aria-current="true"]{color:var(--text)}
+.tabs button[aria-current="true"] svg{color:var(--blood);filter:drop-shadow(0 0 6px rgba(224,16,46,.7))}
+.tabs .dot{position:absolute;top:4px;right:calc(50% - 18px);width:8px;height:8px;border-radius:50%;background:var(--volt);box-shadow:0 0 8px var(--volt)}
+
+/* ---------- shared pieces ---------- */
+.eyebrow{font-family:var(--f-display);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.h-big{font-family:var(--f-display);font-weight:800;font-size:40px;line-height:.92;letter-spacing:.01em;text-transform:uppercase;margin:0;text-wrap:balance}
+.muted{color:var(--dim)}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.between{justify-content:space-between}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+.chip{flex:none;background:var(--ash-2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600;color:var(--text);white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--blood);border-color:var(--blood);color:#fff;box-shadow:0 0 14px rgba(224,16,46,.45)}
+.chip.ghost{background:none}
+.tag{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;padding:2px 8px;border-radius:4px;background:var(--ash-2);border:1px solid var(--line);color:var(--text)}
+.tag.red{border-color:rgba(224,16,46,.6);color:var(--ember)}
+.tag.volt{border-color:rgba(201,182,255,.5);color:var(--volt)}
+.plat{font-family:var(--f-mono);font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:2px 6px;border-radius:3px;border:1px solid var(--line);color:var(--dim)}
+.plat-PC{color:#e6e0ea}.plat-PS5{color:#8fb2ff;border-color:rgba(143,178,255,.4)}.plat-XBX{color:#7fe08f;border-color:rgba(127,224,143,.4)}
+.rep{display:inline-flex;align-items:center;gap:3px;font-family:var(--f-mono);font-size:12px;font-weight:700;color:var(--volt)}
+.rep svg{width:11px;height:11px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border:0;border-radius:10px;padding:14px;font-family:var(--f-display);font-size:20px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--blood);color:#fff;box-shadow:0 0 0 1px rgba(255,68,88,.5),0 8px 24px rgba(224,16,46,.35)}
+.btn:hover{background:var(--ember)}
+.btn:disabled{background:var(--ash-2);color:var(--dim);box-shadow:none;cursor:not-allowed}
+.btn.alt{background:none;color:var(--text);box-shadow:inset 0 0 0 1px var(--line);font-size:17px;padding:11px}
+.btn.alt:hover{box-shadow:inset 0 0 0 1px var(--volt)}
+.btn.volt{background:var(--volt);color:#120a1c;box-shadow:0 0 24px rgba(201,182,255,.5)}
+.link{background:none;border:0;color:var(--dim);font-size:13px;text-decoration:underline;padding:4px}
+.panel{background:var(--ash-2);border:1px solid var(--line);border-radius:12px;padding:14px}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kv div{background:var(--ash-2);border:1px solid var(--line);border-radius:8px;padding:9px 10px;min-width:0}
+.kv dt{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin:0}
+.kv dd{margin:2px 0 0;font-weight:700}
+dl{margin:0}
+
+/* ---------- board ---------- */
+.gamebar{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.gamebtn{display:flex;align-items:center;gap:8px;background:none;border:0;padding:0;text-align:left}
+.gamebtn b{font-family:var(--f-display);font-size:22px;text-transform:uppercase;letter-spacing:.03em}
+.live{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--dim)}
+.live::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--good);box-shadow:0 0 8px var(--good)}
+.card{display:flex;flex-direction:column;gap:8px;width:100%;text-align:left;background:var(--ash-2);border:1px solid var(--line);border-radius:12px;padding:12px 12px 12px 14px;position:relative;overflow:hidden;color:var(--text)}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--line)}
+.card.hot::before{background:var(--blood);box-shadow:0 0 12px var(--blood)}
+.card:hover{border-color:#4a3440}
+.card .target{font-family:var(--f-display);font-weight:800;font-size:25px;line-height:1;text-transform:uppercase;letter-spacing:.02em}
+.card .goal{font-weight:600;color:var(--ember);font-size:14px}
+.pips{display:flex;gap:4px}
+.pips i{width:16px;height:6px;border-radius:2px;background:var(--line)}
+.pips i.on{background:var(--volt);box-shadow:0 0 6px rgba(201,182,255,.7)}
+.spots{font-family:var(--f-mono);font-size:12px;color:var(--dim)}
+.foot{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--dim);flex-wrap:wrap}
+.foot b{color:var(--text);font-weight:600}
+.empty{text-align:center;padding:30px 10px;color:var(--dim)}
+
+/* ---------- forms ---------- */
+.field{display:flex;flex-direction:column;gap:6px}
+.field>label,.field>.lbl{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);font-weight:600}
+.input,select.input,textarea.input{width:100%;background:#0a080a;border:1px solid var(--line);border-radius:8px;padding:10px 12px;color:var(--text)}
+.input:focus{border-color:var(--blood);outline:none;box-shadow:0 0 0 3px rgba(224,16,46,.2)}
+textarea.input{resize:vertical;min-height:64px}
+.seg{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;background:#0a080a;border:1px solid var(--line);border-radius:8px;padding:3px;gap:3px}
+.seg button{background:none;border:0;border-radius:6px;padding:7px 4px;font-size:13px;font-weight:600;color:var(--dim)}
+.seg button[aria-pressed="true"]{background:var(--blood);color:#fff}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tmpl{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12.5px;color:var(--dim);border:1px dashed rgba(201,182,255,.4);border-radius:8px;padding:8px 10px}
+.tmpl b{color:var(--volt);font-weight:600}
+
+/* ---------- room ---------- */
+.slots{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.slot{border:1px solid var(--line);border-radius:10px;padding:10px;min-height:86px;display:flex;flex-direction:column;gap:4px;background:var(--ash-2);min-width:0}
+.slot.open{border-style:dashed;background:none;align-items:center;justify-content:center;color:var(--dim);font-size:13px}
+.slot.open .scan{width:36px;height:2px;background:linear-gradient(90deg,transparent,var(--volt),transparent);animation:scan 1.4s ease-in-out infinite}
+@keyframes scan{0%,100%{transform:translateX(-14px);opacity:.3}50%{transform:translateX(14px);opacity:1}}
+.slot.new{animation:pop .5s ease-out}
+@keyframes pop{0%{box-shadow:0 0 0 0 rgba(201,182,255,.8);border-color:var(--volt)}100%{box-shadow:0 0 0 14px rgba(201,182,255,0)}}
+.slot .name{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.slot .sub{font-size:12px;color:var(--dim)}
+.ready{color:var(--good);font-size:12px;font-weight:700}
+.code{display:flex;flex-direction:column;align-items:center;gap:10px;padding:18px 14px;border-radius:12px;background:radial-gradient(400px 160px at 50% 0%,rgba(201,182,255,.18),transparent),var(--ash-2);border:1px solid rgba(201,182,255,.5)}
+.code .val{font-family:var(--f-mono);font-size:32px;font-weight:700;letter-spacing:.14em;color:var(--volt-core);text-shadow:0 0 18px rgba(201,182,255,.8);user-select:all;word-break:break-all;text-align:center}
+.log{display:flex;flex-direction:column;gap:6px;font-size:13px}
+.log div{display:grid;grid-template-columns:44px 1fr;gap:6px;color:var(--dim)}
+.log time{font-family:var(--f-mono);font-size:11.5px;color:var(--volt);padding-top:1px}
+.log b{color:var(--text);font-weight:600}
+.status{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;font-weight:600;font-size:14px;background:rgba(224,16,46,.1);border:1px solid rgba(224,16,46,.4)}
+.status.full{background:rgba(201,182,255,.1);border-color:rgba(201,182,255,.5);color:var(--volt)}
+.status .timer{margin-left:auto;font-family:var(--f-mono);font-size:13px}
+
+/* ---------- rate ---------- */
+.rate-card{display:flex;flex-direction:column;gap:10px}
+.thumbs{display:flex;gap:6px;margin-left:auto}
+.thumbs button{width:40px;height:36px;border-radius:8px;border:1px solid var(--line);background:#0a080a;display:grid;place-items:center;color:var(--dim)}
+.thumbs button[aria-pressed="true"].up{background:var(--good);border-color:var(--good);color:#04130c}
+.thumbs button[aria-pressed="true"].down{background:var(--blood);border-color:var(--blood);color:#fff}
+.thumbs svg{width:18px;height:18px}
+
+/* ---------- profile ---------- */
+.hero{display:flex;gap:14px;align-items:center}
+.hero .avatar{width:64px;height:64px;font-size:30px;box-shadow:0 0 0 2px var(--ash),0 0 0 3px var(--blood),0 0 24px rgba(224,16,46,.5)}
+.repbig{display:flex;align-items:baseline;gap:8px}
+.repbig b{font-family:var(--f-display);font-size:56px;line-height:.9;color:var(--volt);text-shadow:0 0 20px rgba(201,182,255,.45)}
+.bars{display:flex;flex-direction:column;gap:8px}
+.bar{display:grid;grid-template-columns:120px 1fr 32px;gap:8px;align-items:center;font-size:13px}
+.bar .track{height:6px;border-radius:3px;background:#0a080a;overflow:hidden}
+.bar .track i{display:block;height:100%;background:linear-gradient(90deg,var(--blood),var(--ember))}
+.bar.neg .track i{background:var(--dim)}
+.bar span:last-child{font-family:var(--f-mono);font-size:12px;text-align:right;color:var(--dim)}
+.ids{display:flex;flex-direction:column;gap:6px}
+.idrow{display:grid;grid-template-columns:52px 1fr auto;gap:10px;align-items:center;background:var(--ash-2);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.idrow code{font-family:var(--f-mono);font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mini{background:none;border:1px solid var(--line);border-radius:6px;padding:4px 8px;font-size:12px;color:var(--dim)}
+.mini:hover{color:var(--text);border-color:var(--volt)}
+.hist{display:flex;flex-direction:column}
+.hist div{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.hist div:last-child{border:0}
+
+/* ---------- games ---------- */
+.schema{display:flex;flex-direction:column;gap:0;font-size:13px}
+.schema div{display:grid;grid-template-columns:1fr auto;gap:8px;padding:7px 0;border-bottom:1px solid var(--line)}
+.schema div:last-child{border:0}
+.schema code{font-family:var(--f-mono);font-size:11.5px;color:var(--dim)}
+
+/* ---------- onboarding ---------- */
+.onb-hero{padding:22px 4px 6px;display:flex;flex-direction:column;gap:10px}
+.onb-hero .h-big{font-size:52px}
+.onb-hero .h-big em{font-style:normal;color:var(--blood);text-shadow:0 0 22px rgba(224,16,46,.6)}
+
+.toast{position:absolute;left:16px;right:16px;bottom:80px;z-index:40;background:#1e1620;border:1px solid var(--volt);border-radius:10px;padding:11px 14px;font-size:14px;font-weight:600;box-shadow:0 10px 30px rgba(0,0,0,.6);transform:translateY(20px);opacity:0;transition:.25s;pointer-events:none}
+.toast.on{transform:none;opacity:1}
+
+@media (max-width:820px){
+  .stage{grid-template-columns:minmax(0,1fr);gap:16px;padding-block:16px}
+  .map{position:static;gap:10px}
+  .map .about,.screens small,.screens i,.map .tip{display:none}
+  .screens{flex-direction:row;overflow-x:auto;scrollbar-width:none}
+  .screens button{grid-template-columns:1fr;flex:none;border-color:var(--line);padding:6px 10px}
+  .device{width:100%;max-width:420px;margin:0 auto;height:calc(100vh - 150px);min-height:560px;max-height:none;border-radius:30px;padding:6px}
+  .app{border-radius:24px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="stage">
+  <aside class="map">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#c9b6ff"/></svg>
+      <b>Squad<span>/</span>Finder</b>
+    </div>
+    <p class="about">Working prototype for review. Monster Hunter Wilds is the launch game. Everything here is sample data; nothing is sent anywhere.</p>
+    <button class="walk" id="walk" type="button">Run the Wilds walkthrough<small>Post an Omega Planetes farm and watch a crossplay squad fill.</small></button>
+    <h3 class="tip">Screens</h3>
+    <nav class="screens" id="screens" aria-label="Screens"></nav>
+  </aside>
+
+  <div class="device">
+    <div class="app" id="app">
+      <header class="top" id="top"></header>
+      <main id="main"></main>
+      <nav class="tabs" id="tabs" aria-label="App"></nav>
+      <div class="flash" id="flash"></div>
+      <canvas id="bolt" aria-hidden="true"></canvas>
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ===== icons ===== */
+const I={
+  bolt:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="currentColor"/></svg>',
+  board:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="5" rx="1"/><rect x="3" y="11" width="18" height="5" rx="1"/><path d="M3 20h12"/></svg>',
+  plus:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>',
+  squad:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5M12 20c0-3 3-5 6-5 2 0 4 1 4 3"/></svg>',
+  user:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>',
+  back:'<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>',
+  up:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 11v9H4v-9zM7 11l4-8c2 0 3 1 3 3v3h5c1 0 2 1 2 2l-2 7c0 1-1 2-2 2H7"/></svg>',
+  down:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 13V4H4v9zM7 13l4 8c2 0 3-1 3-3v-3h5c1 0 2-1 2-2l-2-7c0-1-1-2-2-2H7"/></svg>',
+  chev:'<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'
+};
+
+/* ===== sample data ===== */
+const PL={PC:'PC',PS5:'PS5',XBX:'XBOX'};
+const ME={h:'VoltCrow',p:'PC',hr:287,w:'Charge Blade',rep:4.7,n:64,ids:{XBX:'VoltCrow',PS5:'VoltCrow_NA',PC:'voltcrow'}};
+const P={
+  me:ME,
+  kaida:{h:'Kaida_Rush',p:'PS5',hr:418,w:'Long Sword',rep:4.9,n:212},
+  moss:{h:'MossBack',p:'PC',hr:233,w:'Hunting Horn',rep:4.8,n:97},
+  hexa:{h:'Hexa.Lin',p:'PS5',hr:301,w:'Light Bowgun',rep:4.6,n:58},
+  oxide:{h:'oxide_tv',p:'XBX',hr:356,w:'Great Sword',rep:4.4,n:140},
+  pyre:{h:'PyreWitch',p:'PC',hr:188,w:'Insect Glaive',rep:4.9,n:31},
+  dune:{h:'DuneRunner',p:'XBX',hr:122,w:'Lance',rep:4.2,n:22},
+  shade:{h:'shade9',p:'PS5',hr:512,w:'Dual Blades',rep:3.1,n:76},
+  bram:{h:'Bramble',p:'PC',hr:64,w:'Sword & Shield',rep:4.5,n:9},
+};
+const MONSTERS=['Omega Planetes','Arch-Tempered Rey Dau','Gore Magala','Zoh Shia','Lagiacrus','Guardian Arkveld','Mizutsune','Jin Dahaad','Nu Udra','Uth Duna'];
+const WEAPONS=['Great Sword','Long Sword','Sword & Shield','Dual Blades','Hammer','Hunting Horn','Lance','Gunlance','Switch Axe','Charge Blade','Insect Glaive','Light Bowgun','Heavy Bowgun','Bow'];
+const GOALS=['Farm runs','Chill','Learning','Carry','Speedrun'];
+const VIBES=['Sweaty','Chill','Newbie-friendly','Talkative','Quiet','Late night'];
+const seedSessions=()=>[
+  {id:'s1',target:'Omega Planetes',goal:'Farm runs',hr:[200,999],host:'kaida',members:['kaida','oxide'],size:4,mic:'Required',vibe:['Sweaty','Talkative'],plats:['PC','PS5','XBX'],note:'Looping for Omega gear. Five runs minimum, no carts please.',age:'3m'},
+  {id:'s2',target:'Arch-Tempered Rey Dau',goal:'Learning',hr:[100,999],host:'pyre',members:['pyre'],size:4,mic:'Optional',vibe:['Chill','Newbie-friendly'],plats:['PC','PS5','XBX'],note:'Learning the fight. Patient group, no rage-quits.',age:'6m'},
+  {id:'s3',target:'Gore Magala',goal:'Carry',hr:[1,60],host:'moss',members:['moss','bram','dune'],size:4,mic:'Optional',vibe:['Newbie-friendly','Chill'],plats:['PC','XBX'],note:'Helping my cousin through low rank story. Slow pace.',age:'9m'},
+  {id:'s4',target:'Zoh Shia',goal:'Speedrun',hr:[300,999],host:'shade',members:['shade'],size:4,mic:'Off',vibe:['Sweaty','Quiet'],plats:['PS5'],note:'Sub-10 attempts. Know the route.',age:'12m'},
+  {id:'s5',target:'Lagiacrus',goal:'Farm runs',hr:[150,999],host:'hexa',members:['hexa','dune'],size:4,mic:'Optional',vibe:['Chill','Late night'],plats:['PC','PS5','XBX'],note:'Deco farming. Hunting Horn welcome.',age:'15m'},
+  {id:'s6',target:'Guardian Arkveld',goal:'Chill',hr:[50,999],host:'oxide',members:['oxide','pyre'],size:3,mic:'Optional',vibe:['Chill','Talkative','Late night'],plats:['XBX','PC'],note:'Late night hunts, Pacific time. Bring snacks.',age:'21m'},
+];
+
+const SCREENS=[
+  ['onboard','Link platforms','One profile holds Xbox, PSN and Steam IDs.'],
+  ['board','Session board','Live sessions, filtered by goal, rank, mic and open spots.'],
+  ['detail','Session detail','Everything you check before joining, host rep included.'],
+  ['create','Post a session','Form built from the game template. Switch to Shooter to compare.'],
+  ['room','Squad room','Fills live. Host drops the Link Party code once full.'],
+  ['rate','Rate the squad','Thumbs plus tags after every hunt. Feeds reputation.'],
+  ['profile','Profile & rep','Linked IDs, reputation, commendations, history.'],
+  ['games','Game templates','Each game is a template. Wilds is live, others are drafts.'],
+];
+
+const freshForm=()=>({game:'mhw',target:'Omega Planetes',goal:'Farm runs',hrMin:200,hrMax:999,weapon:'Charge Blade',size:4,mic:'Required',vibe:['Sweaty','Talkative'],plats:['PC','PS5','XBX'],note:'Farming Omega gear. 5+ runs, know the mechanics.',mode:'Ranked',map:'Any',rank:'Diamond',role:'Flex'});
+
+const S={screen:'board',sessions:seedSessions(),filter:{act:'All',fit:false,mic:false,spots:false},detail:'s1',room:null,form:freshForm(),rate:{},toastT:0,history:[
+  {t:'Gore Magala · Carry',d:'Yesterday',r:'+3'},{t:'Jin Dahaad · Farm runs',d:'Oct 18',r:'+2'},{t:'Arkveld · Chill',d:'Oct 16',r:'+4'}],
+  commend:{'Good comms':38,'Knows mechanics':29,'Hunt again':41,'Carried the team':12},flags:{'Left early':2,'Toxic':0}};
+
+/* ===== helpers ===== */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const plat=p=>`<span class="plat plat-${p}">${PL[p]}</span>`;
+const rep=v=>`<span class="rep">${I.bolt}${v.toFixed(1)}</span>`;
+const tier=v=>v>=4.7?'Trusted':v>=4.0?'Solid':v>=3.0?'Mixed':'Flagged';
+const av=h=>`<span class="avatar">${esc(h[0].toUpperCase())}</span>`;
+const hrTxt=r=>r[1]>=999?`HR ${r[0]}+`:`HR ${r[0]}–${r[1]}`;
+const sess=id=>S.sessions.find(s=>s.id===id);
+const pressed=b=>`aria-pressed="${b?'true':'false'}"`;
+const clock=s=>`${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;
+
+function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('on');clearTimeout(S.toastT);S.toastT=setTimeout(()=>t.classList.remove('on'),2600)}
+async function copy(text,btn){
+  try{await navigator.clipboard.writeText(text);toast(`Copied ${text}`)}
+  catch(e){const el=btn&&btn.closest('[data-copywrap]')?.querySelector('[data-copytext]');if(el){const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r)}toast('Selected. Press Ctrl+C to copy.')}
+}
+
+/* ===== lightning ===== */
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function strike(){
+  if(reduce)return;
+  const c=$('#bolt'),app=$('#app'),w=app.clientWidth,h=app.clientHeight,dpr=devicePixelRatio||1;
+  c.width=w*dpr;c.height=h*dpr;const g=c.getContext('2d');g.scale(dpr,dpr);
+  const make=(x,y,len,spread)=>{const pts=[[x,y]];while(y<len){y+=14+Math.random()*26;x+=(Math.random()-.5)*spread;pts.push([x,y])}return pts};
+  const main=make(w*(.3+Math.random()*.4),0,h*.62,46);
+  const branches=[1,2].map(()=>{const i=2+Math.floor(Math.random()*(main.length-3));const [x,y]=main[i];return make(x,y,y+80+Math.random()*120,40)});
+  const flash=$('#flash');flash.classList.remove('on');void flash.offsetWidth;flash.classList.add('on');
+  const t0=performance.now();
+  (function frame(t){const k=1-(t-t0)/600;g.clearRect(0,0,w,h);if(k<=0)return;
+    const flick=k>.6||(k>.3&&k<.45)?1:.35;
+    [main,...branches].forEach((pts,i)=>{g.beginPath();pts.forEach(([x,y],j)=>j?g.lineTo(x,y):g.moveTo(x,y));
+      g.globalAlpha=k*flick*(i?.6:1);g.shadowColor='#c9b6ff';g.shadowBlur=24;g.strokeStyle='#c9b6ff';g.lineWidth=i?2:4;g.stroke();
+      g.shadowBlur=0;g.strokeStyle='#ffffff';g.lineWidth=i?.8:1.6;g.stroke()});
+    requestAnimationFrame(frame)})(t0);
+}
+
+/* ===== squad room simulation ===== */
+let timers=[];
+function clearTimers(){timers.forEach(clearTimeout);timers=[]}
+function startRoom(sessionId,asHost){
+  clearTimers();
+  const s=sess(sessionId);
+  if(!asHost&&!s.members.includes('me'))s.members.push('me');
+  const pool=['kaida','moss','hexa','oxide','pyre','dune','bram'].filter(p=>!s.members.includes(p));
+  const need=s.size-s.members.length;
+  const joiners=asHost&&sessionId==='mine'?['kaida','moss','hexa'].slice(0,need):pool.slice(0,need);
+  const stamps=[31,72,114];
+  S.room={id:sessionId,host:asHost,code:'',codeDraft:'4KX9T2PM',posted:false,ready:[],fresh:null,full:s.members.length>=s.size,elapsed:0,
+    log:[{t:'0:00',m:asHost?`You posted <b>${esc(s.target)}</b> · ${esc(s.goal)}`:`You joined <b>${esc(P[s.host].h)}</b>'s squad`}]};
+  joiners.forEach((pid,i)=>{
+    timers.push(setTimeout(()=>{
+      s.members.push(pid);const p=P[pid];S.room.fresh=pid;S.room.elapsed=stamps[i]||stamps[2];
+      S.room.log.push({t:clock(S.room.elapsed),m:`<b>${esc(p.h)}</b> joined · ${PL[p.p]} · HR ${p.hr} · ${esc(p.w)} · rep ${p.rep.toFixed(1)}`});
+      if(s.members.length>=s.size)onFull(s);
+      if(S.screen==='room')render();
+    },1500*(i+1)));
+  });
+  if(!joiners.length&&S.room.full)onFull(s,true);
+}
+function onFull(s,quiet){
+  const r=S.room;r.full=true;
+  r.log.push({t:clock(r.elapsed),m:`Squad full in <b>${clock(r.elapsed)}</b>. ${r.host?'Drop your Link Party code.':'Waiting on host for the code.'}`});
+  if(!quiet)timers.push(setTimeout(strike,150));
+  if(!r.host)timers.push(setTimeout(()=>{postCode('7QMR2DXA',s);if(S.screen==='room')render()},1800));
+}
+function postCode(code,s){
+  const r=S.room;r.code=code;r.posted=true;
+  r.log.push({t:clock(r.elapsed+12),m:`${r.host?'You':'<b>'+esc(P[s.host].h)+'</b>'} posted the Link Party code`});
+  s.members.forEach((pid,i)=>timers.push(setTimeout(()=>{if(!r.ready.includes(pid))r.ready.push(pid);if(S.screen==='room')render()},600+i*700)));
+}
+
+/* ===== views ===== */
+function topBar(){
+  const titles={onboard:'Squad Finder',board:'Sessions',detail:'Session',create:'Post session',room:'Squad room',rate:'Rate squad',profile:'Profile',games:'Games'};
+  const back=['detail','rate','games'].includes(S.screen);
+  return `${back?`<button class="iconbtn" data-act="go" data-to="${S.screen==='rate'?'room':'board'}" aria-label="Back">${I.back}</button>`:`<svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#c9b6ff"/></svg>`}
+    <h1>${titles[S.screen]}</h1>
+    <button class="me-chip" data-act="go" data-to="profile">${av(ME.h)}${rep(ME.rep)}</button>`;
+}
+function tabs(){
+  const t=[['board','Board',I.board],['create','Post',I.plus],['room','Squad',I.squad],['profile','Me',I.user]];
+  const map={detail:'board',games:'board',rate:'room',onboard:'board'};
+  const cur=map[S.screen]||S.screen;
+  return t.map(([k,l,ic])=>`<button data-act="go" data-to="${k}" aria-current="${cur===k}">${ic}${l}${k==='room'&&S.room?'<span class="dot"></span>':''}</button>`).join('');
+}
+
+function vOnboard(){
+  return `<div class="view">
+    <div class="onb-hero">
+      <span class="eyebrow">Step 1 of 2</span>
+      <h2 class="h-big">One profile.<br><em>Every</em> platform.</h2>
+      <p class="muted">Link the IDs you play on. Squadmates see the right one for their platform, so nobody asks "what's your gamertag" again.</p>
+    </div>
+    ${[['XBX','Xbox gamertag'],['PS5','PSN ID'],['PC','Steam name']].map(([k,l])=>`<div class="field"><label for="id-${k}">${plat(k)} ${l}</label><input class="input" id="id-${k}" data-id="${k}" value="${esc(ME.ids[k])}"></div>`).join('')}
+    <div class="field"><span class="lbl">Where you play most</span>
+      <div class="seg">${['PC','PS5','XBX'].map(k=>`<button data-act="mainplat" data-v="${k}" ${pressed(ME.p===k)}>${PL[k]}</button>`).join('')}</div></div>
+    <div class="field"><span class="lbl">Step 2 · Pick your first game</span>
+      <div class="panel row between"><div><b>Monster Hunter Wilds</b><div class="muted" style="font-size:13px">Crossplay · up to 4 hunters</div></div><span class="tag volt">Live</span></div></div>
+    <button class="btn" data-act="go" data-to="board">${I.bolt} Enter the board</button>
+  </div>`;
+}
+
+function vBoard(){
+  const f=S.filter;
+  const list=S.sessions.filter(s=>
+    (f.act==='All'||s.goal===f.act)&&(!f.fit||(ME.hr>=s.hr[0]&&ME.hr<=s.hr[1]))&&(!f.mic||s.mic==='Required')&&(!f.spots||s.size-s.members.length>=2));
+  const open=S.sessions.reduce((a,s)=>a+Math.max(0,s.size-s.members.length),0);
+  return `<div class="view">
+    <div class="gamebar">
+      <button class="gamebtn" data-act="go" data-to="games"><b>MH Wilds</b>${I.chev}</button>
+      <span class="live">${S.sessions.length} sessions · ${open} spots open</span>
+    </div>
+    <div class="chips" role="group" aria-label="Activity">${['All',...GOALS].map(g=>`<button class="chip" data-act="act" data-v="${g}" ${pressed(f.act===g)}>${g}</button>`).join('')}</div>
+    <div class="chips" role="group" aria-label="Filters">
+      <button class="chip ghost" data-act="flt" data-v="fit" ${pressed(f.fit)}>Fits my HR ${ME.hr}</button>
+      <button class="chip ghost" data-act="flt" data-v="mic" ${pressed(f.mic)}>Mic required</button>
+      <button class="chip ghost" data-act="flt" data-v="spots" ${pressed(f.spots)}>2+ spots</button>
+    </div>
+    ${list.length?list.map(card).join(''):`<div class="empty">No sessions match these filters.<br><button class="link" data-act="clearflt">Clear filters</button> or <button class="link" data-act="go" data-to="create">post your own</button></div>`}
+  </div>`;
+}
+function card(s){
+  const h=P[s.host],left=s.size-s.members.length;
+  return `<button class="card ${s.id==='mine'||left===1?'hot':''}" data-act="open" data-id="${s.id}">
+    <div class="row between"><span class="target">${esc(s.target)}</span><span class="spots">${s.members.length}/${s.size}</span></div>
+    <div class="row between"><span class="goal">${esc(s.goal)} · ${hrTxt(s.hr)}</span><span class="pips">${Array.from({length:s.size},(_,i)=>`<i class="${i<s.members.length?'on':''}"></i>`).join('')}</span></div>
+    <div class="row"><span class="tag ${s.mic==='Required'?'red':''}">Mic ${s.mic.toLowerCase()}</span>${s.vibe.map(v=>`<span class="tag">${v}</span>`).join('')}</div>
+    <div class="foot">${av(h.h)}<b>${esc(h.h)}</b>${rep(h.rep)}<span style="margin-left:auto" class="row">${s.plats.map(plat).join('')}</span></div>
+  </button>`;
+}
+
+function vDetail(){
+  const s=sess(S.detail)||S.sessions[0],h=P[s.host];
+  const inRoom=S.room&&S.room.id===s.id,left=s.size-s.members.length,fits=ME.hr>=s.hr[0]&&ME.hr<=s.hr[1],platOk=s.plats.includes(ME.p);
+  const blocked=!fits?`Your HR ${ME.hr} is outside ${hrTxt(s.hr)}`:!platOk?`Host isn't allowing ${PL[ME.p]}`:left<=0?'Squad is full':'';
+  return `<div class="view">
+    <div><span class="eyebrow">Monster Hunter Wilds · posted ${s.age||'now'} ago</span><h2 class="h-big" style="margin-top:6px">${esc(s.target)}</h2></div>
+    <dl class="kv">
+      <div><dt>Goal</dt><dd>${esc(s.goal)}</dd></div>
+      <div><dt>Hunter Rank</dt><dd>${hrTxt(s.hr)}</dd></div>
+      <div><dt>Mic</dt><dd>${s.mic}</dd></div>
+      <div><dt>Spots</dt><dd>${left} of ${s.size} open</dd></div>
+    </dl>
+    <div class="row">${s.vibe.map(v=>`<span class="tag">${v}</span>`).join('')}<span class="muted" style="font-size:13px">Crossplay:</span>${s.plats.map(plat).join('')}</div>
+    <div class="panel"><span class="eyebrow">Host note</span><p style="margin:6px 0 0">${esc(s.note)}</p></div>
+    <div class="field"><span class="lbl">In the squad</span>
+      ${s.members.map(pid=>{const p=P[pid];return `<div class="panel row" style="padding:10px">${av(p.h)}<div style="min-width:0;flex:1"><b>${esc(p.h)}</b>${pid===s.host?' <span class="tag red">Host</span>':''}<div class="muted" style="font-size:12.5px">HR ${p.hr} · ${esc(p.w)} · ${p.n} ratings · ${tier(p.rep)}</div></div>${plat(p.p)}${rep(p.rep)}</div>`}).join('')}
+    </div>
+    ${inRoom?`<button class="btn volt" data-act="go" data-to="room">Back to squad room</button>`:`<button class="btn" data-act="join" data-id="${s.id}" ${blocked?'disabled':''}>${I.bolt} Join squad</button>${blocked?`<p class="muted" style="margin:-6px 0 0;text-align:center;font-size:13px">${blocked}</p>`:''}`}
+    <button class="link" data-act="report" style="align-self:center">Report this session</button>
+  </div>`;
+}
+
+function vCreate(){
+  const f=S.form;
+  const gameSeg=`<div class="seg">${[['mhw','MH Wilds'],['shooter','Shooter (draft)']].map(([k,l])=>`<button data-act="fgame" data-v="${k}" ${pressed(f.game===k)}>${l}</button>`).join('')}</div>`;
+  if(f.game==='shooter')return `<div class="view">${gameSeg}
+    <div class="tmpl"><span>Template: <b>Shooter · draft</b></span><span>6 fields</span></div>
+    <div class="two">
+      <div class="field"><label for="f-mode">Mode</label><select class="input" id="f-mode" data-f="mode">${['Ranked','Unranked','Battle royale','Objective','Custom'].map(o=>`<option ${f.mode===o?'selected':''}>${o}</option>`).join('')}</select></div>
+      <div class="field"><label for="f-map">Map</label><select class="input" id="f-map" data-f="map">${['Any','Rotating pool','Map vote'].map(o=>`<option ${f.map===o?'selected':''}>${o}</option>`).join('')}</select></div>
+    </div>
+    <div class="two">
+      <div class="field"><label for="f-rank">Rank tier</label><select class="input" id="f-rank" data-f="rank">${['Bronze','Silver','Gold','Platinum','Diamond','Top tier'].map(o=>`<option ${f.rank===o?'selected':''}>${o}</option>`).join('')}</select></div>
+      <div class="field"><label for="f-role">Your role</label><select class="input" id="f-role" data-f="role">${['Entry','Support','Sniper','IGL','Flex'].map(o=>`<option ${f.role===o?'selected':''}>${o}</option>`).join('')}</select></div>
+    </div>
+    <div class="field"><span class="lbl">Mic</span><div class="seg">${['Required','Optional','Off'].map(m=>`<button data-act="fmic" data-v="${m}" ${pressed(f.mic===m)}>${m}</button>`).join('')}</div></div>
+    <div class="panel muted" style="font-size:13.5px">Same board, same squad room, same ratings. Only this form changes per game. Pick the launch shooter and we fill in its real modes and maps.</div>
+    <button class="btn" disabled>Shooter not live yet</button>
+  </div>`;
+  return `<div class="view">${gameSeg}
+    <div class="tmpl"><span>Template: <b>Monster Hunter Wilds</b></span><span>9 fields</span></div>
+    <div class="field"><label for="f-target">Target monster</label><select class="input" id="f-target" data-f="target">${MONSTERS.map(m=>`<option ${f.target===m?'selected':''}>${m}</option>`).join('')}</select></div>
+    <div class="field"><span class="lbl">What are you trying to do</span><div class="chips">${GOALS.map(g=>`<button class="chip" data-act="fgoal" data-v="${g}" ${pressed(f.goal===g)}>${g}</button>`).join('')}</div></div>
+    <div class="two">
+      <div class="field"><label for="f-hrmin">Min HR</label><input class="input" id="f-hrmin" type="number" min="1" max="999" data-f="hrMin" value="${f.hrMin}"></div>
+      <div class="field"><label for="f-hrmax">Max HR</label><input class="input" id="f-hrmax" type="number" min="1" max="999" data-f="hrMax" value="${f.hrMax}"></div>
+    </div>
+    <div class="two">
+      <div class="field"><label for="f-weapon">Your main weapon</label><select class="input" id="f-weapon" data-f="weapon">${WEAPONS.map(w=>`<option ${f.weapon===w?'selected':''}>${w}</option>`).join('')}</select></div>
+      <div class="field"><span class="lbl">Squad size</span><div class="seg">${[2,3,4].map(n=>`<button data-act="fsize" data-v="${n}" ${pressed(f.size===n)}>${n}</button>`).join('')}</div></div>
+    </div>
+    <div class="field"><span class="lbl">Mic</span><div class="seg">${['Required','Optional','Off'].map(m=>`<button data-act="fmic" data-v="${m}" ${pressed(f.mic===m)}>${m}</button>`).join('')}</div></div>
+    <div class="field"><span class="lbl">Vibe</span><div class="chips" style="flex-wrap:wrap">${VIBES.map(v=>`<button class="chip" data-act="fvibe" data-v="${v}" ${pressed(f.vibe.includes(v))}>${v}</button>`).join('')}</div></div>
+    <div class="field"><span class="lbl">Crossplay with</span><div class="chips">${['PC','PS5','XBX'].map(k=>`<button class="chip" data-act="fplat" data-v="${k}" ${pressed(f.plats.includes(k))}>${PL[k]}</button>`).join('')}</div></div>
+    <div class="field"><label for="f-note">Note for your squad</label><textarea class="input" id="f-note" data-f="note" maxlength="140">${esc(f.note)}</textarea></div>
+    <button class="btn" data-act="post" id="postbtn">${I.bolt} Post session</button>
+  </div>`;
+}
+
+function vRoom(){
+  const r=S.room;
+  if(!r)return `<div class="view"><div class="empty"><h2 class="h-big" style="font-size:32px;color:var(--text)">No active squad</h2><p>Join a session from the board or post your own. Your squad room lives here while you play.</p></div>
+    <button class="btn" data-act="go" data-to="create">${I.bolt} Post a session</button><button class="btn alt" data-act="go" data-to="board">Browse the board</button></div>`;
+  const s=sess(r.id),host=P[s.host];
+  const slots=Array.from({length:s.size},(_,i)=>{const pid=s.members[i];if(!pid)return `<div class="slot open"><span class="scan"></span>Finding hunter</div>`;
+    const p=P[pid];return `<div class="slot ${r.fresh===pid?'new':''}"><div class="row" style="flex-wrap:nowrap">${av(p.h)}<span class="name">${esc(pid==='me'?p.h+' (you)':p.h)}</span></div>
+      <div class="sub">HR ${p.hr} · ${esc(p.w)}</div><div class="row">${plat(p.p)}${rep(p.rep)}${pid===s.host?'<span class="tag red">Host</span>':''}</div>
+      ${r.ready.includes(pid)?'<span class="ready">In the lobby</span>':''}</div>`}).join('');
+  r.fresh=null;
+  let codeBlock='';
+  if(r.full&&!r.posted&&r.host)codeBlock=`<div class="panel" style="display:flex;flex-direction:column;gap:10px;border-color:rgba(201,182,255,.5)">
+      <label for="code-in" class="eyebrow" style="color:var(--volt)">Your Link Party code</label>
+      <p class="muted" style="margin:0;font-size:13px">In Wilds: Menu › Online › Link Party › Create. Paste the code here and everyone gets it at once.</p>
+      <input class="input" id="code-in" data-f="codeDraft" value="${esc(r.codeDraft)}" style="font-family:var(--f-mono);font-size:18px;letter-spacing:.12em;text-transform:uppercase" maxlength="12">
+      <button class="btn volt" data-act="postcode">Drop code to squad</button></div>`;
+  else if(r.posted)codeBlock=`<div class="code" data-copywrap><span class="eyebrow">Link Party code from ${r.host?'you':esc(host.h)}</span><span class="val" data-copytext>${esc(r.code)}</span>
+      <button class="mini" data-act="copy" data-v="${esc(r.code)}">Copy code</button><span class="muted" style="font-size:12.5px;text-align:center">Wilds › Menu › Online › Link Party › Search by code</span></div>`;
+  const allReady=r.posted&&r.ready.length>=s.members.length;
+  return `<div class="view">
+    <div><span class="eyebrow">${esc(s.goal)} · ${hrTxt(s.hr)} · Mic ${s.mic.toLowerCase()}</span><h2 class="h-big" style="margin-top:6px">${esc(s.target)}</h2></div>
+    <div class="status ${r.full?'full':''}">${I.bolt.replace('<svg','<svg width="18" height="18"')}${r.full?'Squad full':`Finding ${s.size-s.members.length} more hunter${s.size-s.members.length>1?'s':''}`}<span class="timer">${clock(r.elapsed)}</span></div>
+    <div class="slots">${slots}</div>
+    ${codeBlock}
+    ${allReady?`<button class="btn" data-act="done">Hunt complete · Rate squad</button>`:''}
+    <div class="field"><span class="lbl">Squad feed</span><div class="log">${r.log.map(l=>`<div><time>${l.t}</time><span>${l.m}</span></div>`).join('')}</div></div>
+    <button class="link" data-act="leave" style="align-self:center">Leave squad</button>
+  </div>`;
+}
+
+function rateTargets(){
+  if(S.room){const s=sess(S.room.id);return s.members.filter(p=>p!=='me')}
+  return ['kaida','moss','hexa'];
+}
+function vRate(){
+  const tg=rateTargets(),s=S.room?sess(S.room.id):null;
+  const TAGS=['Good comms','Knows mechanics','Carried the team','Hunt again'],BAD=['Left early','Toxic','AFK'];
+  return `<div class="view">
+    <div><span class="eyebrow">${s?esc(s.target)+' · '+esc(s.goal):'Omega Planetes · Farm runs'}</span><h2 class="h-big" style="margin-top:6px;font-size:34px">How was your squad?</h2>
+    <p class="muted" style="margin:6px 0 0">Ratings are anonymous. Good teammates rise on the board, repeat trolls get hidden.</p></div>
+    ${tg.map(pid=>{const p=P[pid],v=S.rate[pid]||{t:[]};return `<div class="panel rate-card">
+      <div class="row" style="flex-wrap:nowrap">${av(p.h)}<div style="min-width:0"><b>${esc(p.h)}</b><div class="muted" style="font-size:12.5px">${PL[p.p]} · ${esc(p.w)}</div></div>
+      <div class="thumbs"><button class="up" data-act="thumb" data-p="${pid}" data-v="up" ${pressed(v.v==='up')} aria-label="Thumbs up">${I.up}</button><button class="down" data-act="thumb" data-p="${pid}" data-v="down" ${pressed(v.v==='down')} aria-label="Thumbs down">${I.down}</button></div></div>
+      ${v.v?`<div class="chips" style="flex-wrap:wrap">${(v.v==='up'?TAGS:BAD).map(t=>`<button class="chip" data-act="rtag" data-p="${pid}" data-v="${t}" ${pressed(v.t.includes(t))}>${t}</button>`).join('')}</div>`:''}
+    </div>`}).join('')}
+    <button class="btn" data-act="submitrate" ${tg.every(p=>S.rate[p]&&S.rate[p].v)?'':'disabled'}>Send ratings</button>
+    <button class="link" data-act="skiprate" style="align-self:center">Skip for now</button>
+  </div>`;
+}
+
+function vProfile(){
+  const max=Math.max(...Object.values(S.commend));
+  return `<div class="view">
+    <div class="hero">${av(ME.h)}<div style="min-width:0"><h2 class="h-big" style="font-size:34px">${esc(ME.h)}</h2><div class="muted">MH Wilds · HR ${ME.hr} · ${esc(ME.w)} main</div></div></div>
+    <div class="panel row between"><div class="repbig"><b>${ME.rep.toFixed(1)}</b><div><div style="font-weight:700">${tier(ME.rep)}</div><div class="muted" style="font-size:12.5px">${ME.n} ratings · top 12% of hunters</div></div></div><span class="tag volt">${I.bolt.replace('<svg','<svg width="11" height="11"')} Rep</span></div>
+    <div class="field"><span class="lbl">Commendations</span><div class="bars">
+      ${Object.entries(S.commend).map(([k,v])=>`<div class="bar"><span>${k}</span><span class="track"><i style="width:${v/max*100}%"></i></span><span>${v}</span></div>`).join('')}
+      ${Object.entries(S.flags).map(([k,v])=>`<div class="bar neg"><span>${k}</span><span class="track"><i style="width:${v/max*100}%"></i></span><span>${v}</span></div>`).join('')}
+    </div></div>
+    <div class="field"><span class="lbl">Linked IDs</span><div class="ids">
+      ${['XBX','PS5','PC'].map(k=>`<div class="idrow" data-copywrap>${plat(k)}<code data-copytext>${esc(ME.ids[k])}</code><button class="mini" data-act="copy" data-v="${esc(ME.ids[k])}">Copy</button></div>`).join('')}
+    </div></div>
+    <div class="field"><span class="lbl">Recent hunts</span><div class="hist">${S.history.map(h=>`<div><span>${esc(h.t)}<br><span class="muted" style="font-size:12px">${h.d}</span></span><span class="rep">${h.r} rep</span></div>`).join('')}</div></div>
+    <button class="btn alt" data-act="go" data-to="onboard">Edit linked platforms</button>
+  </div>`;
+}
+
+function vGames(){
+  const mhw=[['Target monster','pick list · 10'],['Goal','farm / chill / learn / carry / speedrun'],['Hunter Rank range','min–max'],['Main weapon','pick list · 14'],['Squad size','2–4'],['Mic','required / optional / off'],['Vibe','tags'],['Crossplay','PC / PS5 / Xbox'],['Note','140 chars']];
+  return `<div class="view">
+    <div><span class="eyebrow">Design once, add games one by one</span><h2 class="h-big" style="margin-top:6px;font-size:34px">Game templates</h2>
+    <p class="muted" style="margin:6px 0 0">The board, squad room and ratings are shared. Each game only defines its own session form and lobby-code step.</p></div>
+    <div class="panel" style="display:flex;flex-direction:column;gap:10px;border-color:rgba(224,16,46,.6)">
+      <div class="row between"><b style="font-family:var(--f-display);font-size:22px;text-transform:uppercase">Monster Hunter Wilds</b><span class="tag volt">Live</span></div>
+      <div class="muted" style="font-size:13px">Lobby step: Link Party code · Max 4 · Crossplay</div>
+      <div class="schema">${mhw.map(([a,b])=>`<div><span>${a}</span><code>${b}</code></div>`).join('')}</div>
+      <button class="btn alt" data-act="go" data-to="board">Open Wilds board</button>
+    </div>
+    ${[['Shooter','Mode · Map · Rank tier · Role · Mic','Party invite or custom lobby code'],['Raid / MMO','Raid · Difficulty · Role · Item level · Clear experience','Party finder password'],['Survival','Server · World seed · Playstyle · Region','Server IP or join code']].map(([n,fs,l])=>`<div class="panel" style="display:flex;flex-direction:column;gap:6px">
+      <div class="row between"><b style="font-family:var(--f-display);font-size:20px;text-transform:uppercase">${n}</b><span class="tag">Draft</span></div>
+      <div style="font-size:13.5px">${fs}</div><div class="muted" style="font-size:12.5px">Lobby step: ${l}</div></div>`).join('')}
+  </div>`;
+}
+
+const VIEWS={onboard:vOnboard,board:vBoard,detail:vDetail,create:vCreate,room:vRoom,rate:vRate,profile:vProfile,games:vGames};
+function render(keepScroll){
+  const m=$('#main'),y=m.scrollTop;
+  $('#top').innerHTML=topBar();
+  m.innerHTML=VIEWS[S.screen]();
+  $('#tabs').innerHTML=tabs();
+  $('#screens').innerHTML=SCREENS.map(([k,l,d],i)=>`<button data-act="go" data-to="${k}" aria-current="${S.screen===k}"><i>${i+1}</i><div><span>${l}</span><small>${d}</small></div></button>`).join('');
+  m.scrollTop=keepScroll?y:0;
+}
+function go(to){S.screen=to;render()}
+
+/* ===== events ===== */
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-act]');if(!b)return;
+  const a=b.dataset.act,v=b.dataset.v,f=S.form;
+  switch(a){
+    case 'go':go(b.dataset.to);break;
+    case 'act':S.filter.act=v;render(1);break;
+    case 'flt':S.filter[v]=!S.filter[v];render(1);break;
+    case 'clearflt':S.filter={act:'All',fit:false,mic:false,spots:false};render();break;
+    case 'open':S.detail=b.dataset.id;go('detail');break;
+    case 'join':startRoom(b.dataset.id,false);go('room');toast('Joined. Squad room is live.');break;
+    case 'report':toast('Report sent to moderators. Thanks for flagging.');break;
+    case 'mainplat':ME.p=v;render(1);break;
+    case 'fgame':f.game=v;render(1);break;
+    case 'fgoal':f.goal=v;render(1);break;
+    case 'fsize':f.size=+v;render(1);break;
+    case 'fmic':f.mic=v;render(1);break;
+    case 'fvibe':f.vibe=f.vibe.includes(v)?f.vibe.filter(x=>x!==v):[...f.vibe,v];render(1);break;
+    case 'fplat':f.plats=f.plats.includes(v)?f.plats.filter(x=>x!==v):[...f.plats,v];if(!f.plats.length)f.plats=[ME.p];render(1);break;
+    case 'post':{
+      if(S.room)leave(true);
+      const lo=Math.max(1,Math.min(999,+f.hrMin||1)),hi=Math.max(lo,Math.min(999,+f.hrMax||999));
+      ME.w=f.weapon;
+      S.sessions=S.sessions.filter(s=>s.id!=='mine');
+      S.sessions.unshift({id:'mine',target:f.target,goal:f.goal,hr:[lo,hi],host:'me',members:['me'],size:f.size,mic:f.mic,vibe:f.vibe.slice(0,3),plats:f.plats,note:f.note,age:'0m'});
+      startRoom('mine',true);go('room');toast('Session posted. Matching hunters now.');break}
+    case 'postcode':{const code=(S.room.codeDraft||'').trim().toUpperCase();if(code.length<4){toast('Enter the Link Party code from Wilds first.');break}postCode(code,sess(S.room.id));render(1);break}
+    case 'copy':copy(v,b);break;
+    case 'done':S.rate={};go('rate');break;
+    case 'leave':leave();go('board');toast('You left the squad.');break;
+    case 'thumb':{const p=b.dataset.p,cur=S.rate[p];S.rate[p]={v:cur&&cur.v===v?null:v,t:[]};render(1);break}
+    case 'rtag':{const r=S.rate[b.dataset.p];r.t=r.t.includes(v)?r.t.filter(x=>x!==v):[...r.t,v];render(1);break}
+    case 'submitrate':submitRate();break;
+    case 'skiprate':go('board');break;
+  }
+});
+document.addEventListener('input',e=>{
+  const t=e.target;
+  if(t.dataset.f){if(t.dataset.f==='codeDraft'){S.room.codeDraft=t.value}else{S.form[t.dataset.f]=t.type==='number'?t.value:t.value}}
+  if(t.dataset.id)ME.ids[t.dataset.id]=t.value;
+});
+document.addEventListener('change',e=>{if(e.target.matches('select[data-f]'))S.form[e.target.dataset.f]=e.target.value});
+
+function leave(silent){
+  clearTimers();
+  if(S.room){const s=sess(S.room.id);if(s){if(s.id==='mine')S.sessions=S.sessions.filter(x=>x.id!=='mine');else s.members=s.members.filter(p=>p!=='me')}}
+  S.room=null;
+}
+function submitRate(){
+  const s=S.room?sess(S.room.id):null;
+  let ups=0;
+  Object.entries(S.rate).forEach(([pid,r])=>{const p=P[pid];if(!r.v)return;p.n++;p.rep=Math.max(1,Math.min(5,p.rep+(r.v==='up'?.02:-.08)));if(r.v==='up')ups++});
+  // teammates rate you back (simulated)
+  const got=s?s.members.length-1:3;
+  ME.n+=got;ME.rep=Math.min(5,ME.rep+.03);S.commend['Hunt again']+=got;S.commend['Good comms']+=2;
+  S.history.unshift({t:`${s?s.target:'Omega Planetes'} · ${s?s.goal:'Farm runs'}`,d:'Just now',r:`+${got}`});
+  leave(true);S.rate={};
+  go('profile');toast(`Ratings sent. Your squad gave you ${got} commendations.`);
+}
+
+document.getElementById('walk').addEventListener('click',()=>{
+  leave(true);S.sessions=seedSessions();S.form=freshForm();S.filter={act:'All',fit:false,mic:false,spots:false};
+  go('create');
+  const pb=$('#postbtn');if(pb){pb.scrollIntoView({block:'center',behavior:reduce?'auto':'smooth'});pb.focus()}
+  toast('Omega Planetes farm is filled in. Tap Post session.');
+});
+
+render();
+setTimeout(strike,500);
+</script>
