@@ -38,7 +38,7 @@ button{cursor:pointer}
 /* ---------- reviewer screen map ---------- */
 .map{position:sticky;top:32px;display:flex;flex-direction:column;gap:18px}
 .brand{display:flex;align-items:center;gap:10px}
-.brand svg{width:26px;height:26px;filter:drop-shadow(0 0 8px rgba(201,182,255,.7))}
+.brand svg{width:46px;height:46px;flex:none}
 .brand b{font-family:var(--f-display);font-size:30px;letter-spacing:.04em;line-height:1;text-transform:uppercase}
 .brand b span{color:var(--blood)}
 .map p{margin:0;color:var(--dim);font-size:13.5px}
@@ -99,6 +99,8 @@ main{flex:1;overflow-y:auto;overflow-x:hidden;padding:14px 16px 20px;scrollbar-w
 .rep{display:inline-flex;align-items:center;gap:3px;font-family:var(--f-mono);font-size:12px;font-weight:700;color:var(--volt)}
 .rep svg{width:11px;height:11px}
 .btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border:0;border-radius:10px;padding:14px;font-family:var(--f-display);font-size:20px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--blood);color:#fff;box-shadow:0 0 0 1px rgba(255,68,88,.5),0 8px 24px rgba(224,16,46,.35)}
+.btn svg{width:18px;height:18px;flex:none}
+[hidden]{display:none!important}
 .btn:hover{background:var(--ember)}
 .btn:disabled{background:var(--ash-2);color:var(--dim);box-shadow:none;cursor:not-allowed}
 .btn.alt{background:none;color:var(--text);box-shadow:inset 0 0 0 1px var(--line);font-size:17px;padding:11px}
@@ -205,6 +207,19 @@ textarea.input{resize:vertical;min-height:64px}
 .onb-hero .h-big{font-size:52px}
 .onb-hero .h-big em{font-style:normal;color:var(--blood);text-shadow:0 0 22px rgba(224,16,46,.6)}
 
+/* ---------- title screen ---------- */
+main.is-splash{padding:0}
+.splash{position:relative;min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:28px 22px 22px;overflow:hidden;
+  background:radial-gradient(260px 220px at 50% 34%,rgba(224,16,46,.38),transparent 70%),radial-gradient(420px 300px at 50% 110%,rgba(201,182,255,.12),transparent 70%),
+  repeating-linear-gradient(115deg,transparent 0 38px,rgba(224,16,46,.05) 38px 39px),var(--void)}
+.splash .emblem{width:168px;height:168px;filter:drop-shadow(0 0 28px rgba(224,16,46,.55))}
+.wordmark{margin:4px 0 0;font-family:var(--f-display);font-weight:800;font-size:76px;line-height:.82;letter-spacing:.02em;text-transform:uppercase;display:flex;flex-direction:column}
+.wordmark span:first-child{color:var(--volt-core);text-shadow:0 0 14px rgba(201,182,255,.35)}
+.wordmark .f{color:var(--blood);text-shadow:0 0 2px var(--ember),0 0 18px rgba(224,16,46,.9),0 0 42px rgba(224,16,46,.5);animation:zap 5s infinite}
+@keyframes zap{0%,90%,100%{opacity:1}91%{opacity:.55}92%{opacity:1}93.5%{opacity:.7}94%{opacity:1}}
+.charge{width:160px;height:3px;border-radius:2px;background:linear-gradient(90deg,transparent,var(--volt),var(--volt-core),var(--volt),transparent);box-shadow:0 0 14px var(--volt)}
+.tagline{margin:0;font-family:var(--f-display);font-size:20px;letter-spacing:.14em;text-transform:uppercase;color:var(--text)}
+.splash .btn{max-width:260px;margin-top:10px}
 .marks{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;color:var(--dim);opacity:.55;text-align:center}
 .brand sup{font-family:var(--f-mono);font-size:10px;color:var(--dim);opacity:.6;align-self:flex-start}
 .toast{position:absolute;left:16px;right:16px;bottom:80px;z-index:40;background:#1e1620;border:1px solid var(--volt);border-radius:10px;padding:11px 14px;font-size:14px;font-weight:600;box-shadow:0 10px 30px rgba(0,0,0,.6);transform:translateY(20px);opacity:0;transition:.25s;pointer-events:none}
@@ -225,8 +240,8 @@ textarea.input{resize:vertical;min-height:64px}
 <div class="stage">
   <aside class="map">
     <div class="brand">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#c9b6ff"/></svg>
-      <b>Squad<span>/</span>Finder</b><sup>™</sup>
+      <span id="brandmark"></span>
+      <b>Squad <span>Finder</span></b><sup>™</sup>
     </div>
     <p class="about">Working prototype for review. Monster Hunter Wilds is the launch game. Everything here is sample data; nothing is sent anywhere.</p>
     <button class="walk" id="walk" type="button">Run the Wilds walkthrough<small>Post an Omega Planetes farm and watch a crossplay squad fill.</small></button>
@@ -289,6 +304,7 @@ const seedSessions=()=>[
 ];
 
 const SCREENS=[
+  ['splash','Title screen','First thing players see when they open the app.'],
   ['onboard','Link platforms','One profile holds Xbox, PSN and Steam IDs.'],
   ['board','Session board','Live sessions, filtered by goal, rank, mic and open spots.'],
   ['detail','Session detail','Everything you check before joining, host rep included.'],
@@ -301,7 +317,7 @@ const SCREENS=[
 
 const freshForm=()=>({game:'mhw',target:'Omega Planetes',goal:'Farm runs',hrMin:200,hrMax:999,weapon:'Charge Blade',size:4,mic:'Required',vibe:['Sweaty','Talkative'],plats:['PC','PS5','XBX'],note:'Farming Omega gear. 5+ runs, know the mechanics.',mode:'Ranked',map:'Any',rank:'Diamond',role:'Flex'});
 
-const S={screen:'board',sessions:seedSessions(),filter:{act:'All',fit:false,mic:false,spots:false},detail:'s1',room:null,form:freshForm(),rate:{},toastT:0,history:[
+const S={screen:'splash',sessions:seedSessions(),filter:{act:'All',fit:false,mic:false,spots:false},detail:'s1',room:null,form:freshForm(),rate:{},toastT:0,history:[
   {t:'Gore Magala · Carry',d:'Yesterday',r:'+3'},{t:'Jin Dahaad · Farm runs',d:'Oct 18',r:'+2'},{t:'Arkveld · Chill',d:'Oct 16',r:'+4'}],
   commend:{'Good comms':38,'Knows mechanics':29,'Hunt again':41,'Carried the team':12},flags:{'Left early':2,'Toxic':0}};
 
@@ -315,6 +331,17 @@ const av=h=>`<span class="avatar">${esc(h[0].toUpperCase())}</span>`;
 const hrTxt=r=>r[1]>=999?`HR ${r[0]}+`:`HR ${r[0]}–${r[1]}`;
 const sess=id=>S.sessions.find(s=>s.id===id);
 const pressed=b=>`aria-pressed="${b?'true':'false'}"`;
+function logo(size,cls='emblem'){
+  return `<svg class="${cls}" width="${size}" height="${size}" viewBox="0 0 120 120" role="img" aria-label="Squad Finder">
+    <defs><linearGradient id="sfR" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff4458"/><stop offset="1" stop-color="#7a0315"/></linearGradient>
+    <linearGradient id="sfV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#c9b6ff"/></linearGradient>
+    <filter id="sfG" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+    <polygon points="60,7 106,33.5 106,86.5 60,113 14,86.5 14,33.5" fill="#0b080b" stroke="url(#sfR)" stroke-width="6" stroke-linejoin="round" filter="url(#sfG)"/>
+    <polygon points="60,20 94.5,40 94.5,80 60,100 25.5,80 25.5,40" fill="none" stroke="#e0102e" stroke-opacity=".4" stroke-width="1.5"/>
+    <circle cx="25.5" cy="40" r="4.5" fill="#e0102e"/><circle cx="94.5" cy="40" r="4.5" fill="#e0102e"/><circle cx="25.5" cy="80" r="4.5" fill="#e0102e"/><circle cx="94.5" cy="80" r="4.5" fill="#e0102e"/>
+    <path d="M70 4 L34 66 H56 L46 116 L88 50 H65 L78 4 Z" fill="url(#sfV)" stroke="#e0102e" stroke-width="3" stroke-linejoin="round" filter="url(#sfG)"/>
+  </svg>`;
+}
 const clock=s=>`${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;
 
 function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('on');clearTimeout(S.toastT);S.toastT=setTimeout(()=>t.classList.remove('on'),2600)}
@@ -379,19 +406,31 @@ function postCode(code,s){
 
 /* ===== views ===== */
 function topBar(){
-  const titles={onboard:'Squad Finder',board:'Sessions',detail:'Session',create:'Post session',room:'Squad room',rate:'Rate squad',profile:'Profile',games:'Games'};
+  const titles={splash:'Squad Finder',onboard:'Squad Finder',board:'Sessions',detail:'Session',create:'Post session',room:'Squad room',rate:'Rate squad',profile:'Profile',games:'Games'};
   const back=['detail','rate','games'].includes(S.screen);
-  return `${back?`<button class="iconbtn" data-act="go" data-to="${S.screen==='rate'?'room':'board'}" aria-label="Back">${I.back}</button>`:`<svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#c9b6ff"/></svg>`}
+  return `${back?`<button class="iconbtn" data-act="go" data-to="${S.screen==='rate'?'room':'board'}" aria-label="Back">${I.back}</button>`:logo(26,'logo')}
     <h1>${titles[S.screen]}</h1>
     <button class="me-chip" data-act="go" data-to="profile">${av(ME.h)}${rep(ME.rep)}</button>`;
 }
 function tabs(){
   const t=[['board','Board',I.board],['create','Post',I.plus],['room','Squad',I.squad],['profile','Me',I.user]];
-  const map={detail:'board',games:'board',rate:'room',onboard:'board'};
+  const map={splash:'board',detail:'board',games:'board',rate:'room',onboard:'board'};
   const cur=map[S.screen]||S.screen;
   return t.map(([k,l,ic])=>`<button data-act="go" data-to="${k}" aria-current="${cur===k}">${ic}${l}${k==='room'&&S.room?'<span class="dot"></span>':''}</button>`).join('');
 }
 
+function vSplash(){
+  return `<div class="splash">
+    ${logo(168)}
+    <h2 class="wordmark"><span>Squad</span><span class="f">Finder</span></h2>
+    <div class="charge"></div>
+    <p class="tagline">Find your squad. Every platform.</p>
+    <div class="row" style="justify-content:center">${plat('PC')}${plat('PS5')}${plat('XBX')}</div>
+    <button class="btn" data-act="go" data-to="onboard">${I.bolt} Press start</button>
+    <button class="link" data-act="go" data-to="board">Skip to the board</button>
+    <div class="marks" style="margin-top:8px">Squad Finder™ · © ℗ 2026 VCA OS</div>
+  </div>`;
+}
 function vOnboard(){
   return `<div class="view">
     <div class="onb-hero">
@@ -582,9 +621,11 @@ function vGames(){
   </div>`;
 }
 
-const VIEWS={onboard:vOnboard,board:vBoard,detail:vDetail,create:vCreate,room:vRoom,rate:vRate,profile:vProfile,games:vGames};
+const VIEWS={splash:vSplash,onboard:vOnboard,board:vBoard,detail:vDetail,create:vCreate,room:vRoom,rate:vRate,profile:vProfile,games:vGames};
 function render(keepScroll){
   const m=$('#main'),y=m.scrollTop;
+  const sp=S.screen==='splash';
+  $('#top').hidden=sp;$('#tabs').hidden=sp;m.classList.toggle('is-splash',sp);
   $('#top').innerHTML=topBar();
   m.innerHTML=VIEWS[S.screen]();
   $('#tabs').innerHTML=tabs();
@@ -660,6 +701,7 @@ document.getElementById('walk').addEventListener('click',()=>{
   toast('Omega Planetes farm is filled in. Tap Post session.');
 });
 
+$('#brandmark').outerHTML=logo(46,'brandmark');
 render();
 setTimeout(strike,500);
 </script>
