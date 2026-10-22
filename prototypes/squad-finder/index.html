@@ -215,8 +215,12 @@ main.is-splash{padding:0}
 .splash .emblem{width:168px;height:168px;filter:drop-shadow(0 0 28px rgba(224,16,46,.55))}
 .wordmark{margin:4px 0 0;font-family:var(--f-display);font-weight:800;font-size:76px;line-height:.82;letter-spacing:.02em;text-transform:uppercase;display:flex;flex-direction:column}
 .wordmark span:first-child{color:var(--volt-core);text-shadow:0 0 14px rgba(201,182,255,.35)}
-.wordmark .f{color:var(--blood);text-shadow:0 0 2px var(--ember),0 0 18px rgba(224,16,46,.9),0 0 42px rgba(224,16,46,.5);animation:zap 5s infinite}
-@keyframes zap{0%,90%,100%{opacity:1}91%{opacity:.55}92%{opacity:1}93.5%{opacity:.7}94%{opacity:1}}
+.wordmark .f{color:var(--blood);text-shadow:0 0 2px var(--ember),0 0 18px rgba(224,16,46,.9),0 0 42px rgba(224,16,46,.5)}
+.wordmark .f.off,.brand b span.off{opacity:.32;text-shadow:none}
+.sound{position:absolute;top:14px;right:14px;display:flex;align-items:center;gap:6px;background:rgba(15,12,16,.7);border:1px solid var(--line);border-radius:999px;padding:5px 11px;font-size:12px;font-weight:600;color:var(--dim)}
+.sound[aria-pressed="true"]{color:var(--text);border-color:rgba(224,16,46,.6)}
+.sound svg{width:15px;height:15px}
+.sound:hover{border-color:var(--volt)}
 .charge{width:160px;height:3px;border-radius:2px;background:linear-gradient(90deg,transparent,var(--volt),var(--volt-core),var(--volt),transparent);box-shadow:0 0 14px var(--volt)}
 .tagline{margin:0;font-family:var(--f-display);font-size:20px;letter-spacing:.14em;text-transform:uppercase;color:var(--text)}
 .splash .btn{max-width:260px;margin-top:10px}
@@ -280,6 +284,8 @@ const I={
   back:'<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>',
   up:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 11v9H4v-9zM7 11l4-8c2 0 3 1 3 3v3h5c1 0 2 1 2 2l-2 7c0 1-1 2-2 2H7"/></svg>',
   down:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 13V4H4v9zM7 13l4 8c2 0 3-1 3-3v-3h5c1 0 2-1 2-2l-2-7c0-1-1-2-2-2H7"/></svg>',
+  spk:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 9c1.5 1.5 1.5 4.5 0 6M19 6c3 3 3 9 0 12"/></svg>',
+  mute:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M17 9l5 6M22 9l-5 6"/></svg>',
   chev:'<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'
 };
 
@@ -357,10 +363,57 @@ async function copy(text,btn){
   catch(e){const el=btn&&btn.closest('[data-copywrap]')?.querySelector('[data-copytext]');if(el){const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r)}toast('Selected. Press Ctrl+C to copy.')}
 }
 
+/* ===== sound: synthesized with Web Audio, starts after the first tap ===== */
+const SND={ctx:null,master:null,on:true};
+function audio(){
+  if(!SND.on)return null;
+  try{
+    if(!SND.ctx){const C=window.AudioContext||window.webkitAudioContext;if(!C)return null;SND.ctx=new C();SND.master=SND.ctx.createGain();SND.master.gain.value=.55;SND.master.connect(SND.ctx.destination)}
+    if(SND.ctx.state==='suspended')SND.ctx.resume();
+    return SND.ctx.state==='running'?SND.ctx:null;
+  }catch(e){return null}
+}
+function noise(c,dur){const b=c.createBuffer(1,Math.ceil(c.sampleRate*dur),c.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=Math.random()*2-1;const s=c.createBufferSource();s.buffer=b;return s}
+// neon tube re-igniting: mains hum through a band-pass plus high sizzle
+function buzz(dur,at=0){
+  const c=audio();if(!c)return;const t=c.currentTime+at;
+  const g=c.createGain();g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.16,t+.008);g.gain.setValueAtTime(.16,t+dur*.7);g.gain.linearRampToValueAtTime(0,t+dur);g.connect(SND.master);
+  const o=c.createOscillator();o.type='sawtooth';o.frequency.value=120;const bp=c.createBiquadFilter();bp.type='bandpass';bp.frequency.value=700;bp.Q.value=1.4;o.connect(bp).connect(g);o.start(t);o.stop(t+dur+.02);
+  const n=noise(c,dur+.02),hp=c.createBiquadFilter(),ng=c.createGain();hp.type='highpass';hp.frequency.value=3500;ng.gain.value=.35;n.connect(hp).connect(ng).connect(g);n.start(t);
+}
+// lightning: a burst of short snaps, then a low rolling thump
+function crackle(){
+  const c=audio();if(!c)return;const t=c.currentTime;
+  for(let i=0;i<14;i++){
+    const at=t+Math.random()*.55*(i/14+.2),len=.015+Math.random()*.05;
+    const n=noise(c,len),f=c.createBiquadFilter(),g=c.createGain();
+    f.type='bandpass';f.frequency.value=1500+Math.random()*5000;f.Q.value=.8;
+    g.gain.setValueAtTime(.5+Math.random()*.5,at);g.gain.exponentialRampToValueAtTime(.001,at+len);
+    n.connect(f).connect(g).connect(SND.master);n.start(at);
+  }
+  const r=noise(c,1.4),lp=c.createBiquadFilter(),rg=c.createGain();
+  lp.type='lowpass';lp.frequency.value=180;rg.gain.setValueAtTime(0,t);rg.gain.linearRampToValueAtTime(.9,t+.04);rg.gain.exponentialRampToValueAtTime(.001,t+1.4);
+  r.connect(lp).connect(rg).connect(SND.master);r.start(t);
+}
+
+/* ===== failing-neon flicker on FINDER ===== */
+function flicker(){
+  const els=[...document.querySelectorAll('.wordmark .f,.brand b span')];if(!els.length)return;
+  const steps=[[1,70],[0,90],[1,50],[0,140],[1,40],[0,60]];let at=0;
+  const audible=S.screen==='splash'&&!document.hidden;
+  steps.forEach(([off,ms])=>{
+    setTimeout(()=>els.forEach(e=>e.classList.toggle('off',!!off)),at);
+    if(!off&&audible)buzz(ms/1000+.04,at/1000);
+    at+=ms;
+  });
+  setTimeout(()=>{els.forEach(e=>e.classList.remove('off'));if(audible)buzz(.12,0)},at);
+}
+
 /* ===== lightning ===== */
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 function strike(){
   if(reduce)return;
+  crackle();
   const c=$('#bolt'),app=$('#app'),w=app.clientWidth,h=app.clientHeight,dpr=devicePixelRatio||1;
   c.width=w*dpr;c.height=h*dpr;const g=c.getContext('2d');g.scale(dpr,dpr);
   const make=(x,y,len,spread)=>{const pts=[[x,y]];while(y<len){y+=14+Math.random()*26;x+=(Math.random()-.5)*spread;pts.push([x,y])}return pts};
@@ -428,6 +481,7 @@ function tabs(){
 
 function vSplash(){
   return `<div class="splash">
+    <button class="sound" data-act="sound" ${pressed(SND.on)}>${SND.on?I.spk+'Sound on':I.mute+'Muted'}</button>
     ${logo(168)}
     <h2 class="wordmark"><span>Squad</span><span class="f">Finder</span></h2>
     <div class="charge"></div>
@@ -669,6 +723,7 @@ document.addEventListener('click',e=>{
       startRoom('mine',true);go('room');toast('Session posted. Matching hunters now.');break}
     case 'postcode':{const code=(S.room.codeDraft||'').trim().toUpperCase();if(code.length<4){toast('Enter the Link Party code from Wilds first.');break}postCode(code,sess(S.room.id));render(1);break}
     case 'copy':copy(v,b);break;
+    case 'sound':SND.on=!SND.on;if(SND.on){audio();buzz(.15)}render(1);break;
     case 'done':S.rate={};go('rate');break;
     case 'leave':leave();go('board');toast('You left the squad.');break;
     case 'thumb':{const p=b.dataset.p,cur=S.rate[p];S.rate[p]={v:cur&&cur.v===v?null:v,t:[]};render(1);break}
@@ -711,4 +766,10 @@ document.getElementById('walk').addEventListener('click',()=>{
 $('#brandmark').outerHTML=logo(46,'brandmark');
 render();
 setTimeout(strike,500);
+// the first tap unlocks audio; the title screen greets it with a strike
+document.addEventListener('pointerdown',function unlock(){document.removeEventListener('pointerdown',unlock);if(audio()&&S.screen==='splash')setTimeout(strike,60)},{once:true});
+if(!reduce){
+  (function neon(){setTimeout(()=>{flicker();neon()},3200+Math.random()*3800)})();
+  (function storm(){setTimeout(()=>{if(S.screen==='splash'&&!document.hidden)strike();storm()},9000+Math.random()*7000)})();
+}
 </script>
