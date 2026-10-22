@@ -1,0 +1,3839 @@
+[
+ {
+  "name": "Attack Boost",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 5,
+  "level_effects": {
+   "1": "Attack +3",
+   "2": "Attack +5",
+   "3": "Attack +7",
+   "4": "Attack +2% Bonus: +8",
+   "5": "Attack +4% Bonus: +9"
+  },
+  "explain": "Increases attack power.",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Resentment",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 5,
+  "level_effects": {
+   "1": "Attack +5 while active.",
+   "2": "Attack +10 while active.",
+   "3": "Attack +15 while active.",
+   "4": "Attack +20 while active.",
+   "5": "Attack +25 while active."
+  },
+  "explain": "Increases attack when you have recoverable damage (the red portion of your Health Gauge).",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Adrenaline Rush",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 5,
+  "level_effects": {
+   "1": "Attack +10 while active.",
+   "2": "Attack +15 while active.",
+   "3": "Attack +20 while active.",
+   "4": "Attack +25 while active.",
+   "5": "Attack +30 while active."
+  },
+  "explain": "Temporarily increases attack power after executing a perfectly-timed evade just as a monster attacks.",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Offensive Guard",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Attack +5% while active.",
+   "2": "Attack +10% while active.",
+   "3": "Attack +15% while active."
+  },
+  "explain": "Temporarily increases attack power after executing a perfectly-timed guard.",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Peak Performance",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 5,
+  "level_effects": {
+   "1": "Attack +3 while active.",
+   "2": "Attack +6 while active.",
+   "3": "Attack +10 while active.",
+   "4": "Attack +15 while active.",
+   "5": "Attack +20 while active."
+  },
+  "explain": "Increases attack when your health is full.",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Counterstrike",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Attack +10 while active.",
+   "2": "Attack +15 while active. Moderately extends effect time.",
+   "3": "Attack +25 while active. Extends effect time."
+  },
+  "explain": "Temporarily increases attack power after being knocked back.",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Critical Eye",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 5,
+  "level_effects": {
+   "1": "Affinity +4%",
+   "2": "Affinity +8%",
+   "3": "Affinity +12%",
+   "4": "Affinity +16%",
+   "5": "Affinity +20%"
+  },
+  "explain": "Increases affinity.",
+  "icon_type": "Affinity",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Affinity Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/a/a2/MHWA-Affinity_Skill_Icon.png"
+ },
+ {
+  "name": "Critical Boost",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 5,
+  "level_effects": {
+   "1": "Increases damage dealt by critical hits to 28%.",
+   "2": "Increases damage dealt by critical hits to 31%.",
+   "3": "Increases damage dealt by critical hits to 34%.",
+   "4": "Increases damage dealt by critical hits to 37%.",
+   "5": "Increases damage dealt by critical hits to 40%."
+  },
+  "explain": "Increases the damage of critical hits.",
+  "icon_type": "Affinity",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Affinity Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/a/a2/MHWA-Affinity_Skill_Icon.png"
+ },
+ {
+  "name": "Weakness Exploit",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 5,
+  "level_effects": {
+   "1": "Attacks that hit weak points gain affinity +5%, with an extra 3% on wounds.",
+   "2": "Attacks that hit weak points gain affinity +10%, with an extra 5% on wounds.",
+   "3": "Attacks that hit weak points gain affinity +15%, with an extra 10% on wounds.",
+   "4": "Attacks that hit weak points have 20% increased affinity, with an extra 15% on wounds.",
+   "5": "Attacks that hit weak points have 30% increased affinity, with an extra 20% on wounds."
+  },
+  "explain": "Increases the affinity of attacks that exploit a monster's weak  points and wounds.",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Critical Draw",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Affinity +50%",
+   "2": "Affinity +75%",
+   "3": "Affinity +100%"
+  },
+  "explain": "Increases affinity when performing draw attacks. (Not effective while riding.)",
+  "icon_type": "Affinity",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Affinity Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/a/a2/MHWA-Affinity_Skill_Icon.png"
+ },
+ {
+  "name": "Maximum Might",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Affinity +10% while active",
+   "2": "Affinity +20% while active",
+   "3": "Affinity +30% while active"
+  },
+  "explain": "Increases affinity if stamina is kept full for a period of time.",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Fire Attack",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Fire attack +40",
+   "2": "Fire attack +10% Bonus: +50",
+   "3": "Fire attack +20% Bonus: +60"
+  },
+  "explain": "Increases fire element attack power. (Elemental attack power has a maximum limit.)",
+  "icon_type": "Element",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Element Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/b/b2/MHWA-Element_Skill_Icon.png"
+ },
+ {
+  "name": "Water Attack",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Water attack +40",
+   "2": "Water attack +10% Bonus: +50",
+   "3": "Water attack +20% Bonus: +60"
+  },
+  "explain": "Increases water element attack power. (Elemental attack power has a maximum limit.)",
+  "icon_type": "Element",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Element Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/b/b2/MHWA-Element_Skill_Icon.png"
+ },
+ {
+  "name": "Ice Attack",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Ice attack +40",
+   "2": "Ice attack +10% Bonus: +50",
+   "3": "Ice attack +20% Bonus: +60"
+  },
+  "explain": "Increases ice element attack power. (Elemental attack power has a maximum limit.)",
+  "icon_type": "Element",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Element Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/b/b2/MHWA-Element_Skill_Icon.png"
+ },
+ {
+  "name": "Thunder Attack",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Thunder attack +40",
+   "2": "Thunder attack +10% Bonus: +50",
+   "3": "Thunder attack +20% Bonus: +60"
+  },
+  "explain": "Increases thunder element attack power. (Elemental attack power has a maximum limit.)",
+  "icon_type": "Element",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Element Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/b/b2/MHWA-Element_Skill_Icon.png"
+ },
+ {
+  "name": "Dragon Attack",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Dragon attack +40",
+   "2": "Dragon attack +10% Bonus: +50",
+   "3": "Dragon attack +20% Bonus: +60"
+  },
+  "explain": "Increases dragon element attack power. (Elemental attack power has a maximum limit.)",
+  "icon_type": "Element",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Element Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/b/b2/MHWA-Element_Skill_Icon.png"
+ },
+ {
+  "name": "Poison Attack",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Poison buildup +5% Bonus: +10",
+   "2": "Poison buildup +10% Bonus: +20",
+   "3": "Poison buildup +20% Bonus: +50"
+  },
+  "explain": "Increases the rate of poison buildup. (Poison buildup has a maximum limit.)",
+  "icon_type": "Element",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Element Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/b/b2/MHWA-Element_Skill_Icon.png"
+ },
+ {
+  "name": "Paralysis Attack",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Paralysis buildup +5% Bonus: +10",
+   "2": "Paralysis buildup +10% Bonus: +20",
+   "3": "Paralysis buildup +20% Bonus: +50"
+  },
+  "explain": "Increases the rate of paralysis buildup. (Paralysis buildup has a maximum limit.)",
+  "icon_type": "Element",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Element Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/b/b2/MHWA-Element_Skill_Icon.png"
+ },
+ {
+  "name": "Sleep Attack",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Sleep buildup +5% Bonus: +10",
+   "2": "Sleep buildup +10% Bonus: +20",
+   "3": "Sleep buildup +20% Bonus: +50"
+  },
+  "explain": "Increases the rate of sleep buildup. (Sleep buildup has a maximum limit.)",
+  "icon_type": "Element",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Element Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/b/b2/MHWA-Element_Skill_Icon.png"
+ },
+ {
+  "name": "Blast Attack",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Blast buildup +5% Bonus: +10",
+   "2": "Blast buildup +10% Bonus: +20",
+   "3": "Blast buildup +20% Bonus: +50"
+  },
+  "explain": "Increases the rate of blast buildup. (Blast buildup has a maximum limit.)",
+  "icon_type": "Element",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Element Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/b/b2/MHWA-Element_Skill_Icon.png"
+ },
+ {
+  "name": "Critical Element",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Slightly increases elemental damage while active.",
+   "2": "Increases elemental damage while active.",
+   "3": "Greatly increases elemental damage while active."
+  },
+  "explain": "Increases elemental damage (fire, water, thunder, ice, dragon) when landing critical hits.",
+  "icon_type": "Element",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Element Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/b/b2/MHWA-Element_Skill_Icon.png"
+ },
+ {
+  "name": "Critical Status",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Slightly increases abnormal status effects when landing critical hits.",
+   "2": "Increases abnormal status effects when landing critical hits.",
+   "3": "Greatly increases abnormal status effects when landing critical hits."
+  },
+  "explain": "Increases abnormal status effects (paralysis, poison, sleep, blast) when landing critical hits.",
+  "icon_type": "Element",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Element Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/b/b2/MHWA-Element_Skill_Icon.png"
+ },
+ {
+  "name": "Charge Master",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Slightly increases elemental attack and status buildup for charged attacks.",
+   "2": "Increases elemental attack and status buildup for charged attacks.",
+   "3": "Greatly increases elemental attack and status buildup for charged attacks."
+  },
+  "explain": "Increases element power and status buildup for charged attacks.",
+  "icon_type": "Element",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Element Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/b/b2/MHWA-Element_Skill_Icon.png"
+ },
+ {
+  "name": "Convert Element",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "While active, deals extra dragon damage after dealing enough elemental damage. Slightly increases dragon attack.",
+   "2": "Increases additional dragon damage and increases dragon attack.",
+   "3": "Further increases additional dragon damage and greatly increases dragon attack."
+  },
+  "explain": "After taking elemental damage, temporarily grants you dragon element effects. (Cooldown after effect ends.)",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Handicraft",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 5,
+  "level_effects": {
+   "1": "Weapon sharpness +10",
+   "2": "Weapon sharpness +20",
+   "3": "Weapon sharpness +30",
+   "4": "Weapon sharpness +40",
+   "5": "Weapon sharpness +50"
+  },
+  "explain": "Extends the weapon sharpness gauge. However, it will not increase the gauge past its maximum.",
+  "icon_type": "Sharpness",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Sharpness Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/8/8c/MHWA-Sharpness_Skill_Icon.png"
+ },
+ {
+  "name": "Razor Sharp",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Grants a 10% chance of no sharpness loss.",
+   "2": "Grants a 25% chance of no sharpness loss.",
+   "3": "Grants a 50% chance of no sharpness loss."
+  },
+  "explain": "Prevents your weapon from losing sharpness.",
+  "icon_type": "Sharpness",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Sharpness Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/8/8c/MHWA-Sharpness_Skill_Icon.png"
+ },
+ {
+  "name": "Protective Polish",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Grants no sharpness loss for 30 seconds after activation.",
+   "2": "Grants no sharpness loss for 60 seconds after activation.",
+   "3": "Grants no sharpness loss for 90 seconds after activation."
+  },
+  "explain": "Weapon sharpness does not decrease for a set time after sharpening.",
+  "icon_type": "Sharpness",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Sharpness Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/8/8c/MHWA-Sharpness_Skill_Icon.png"
+ },
+ {
+  "name": "Mind's Eye",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "50% chance of your attacks not being deflected, +10% attack power against hard targets.",
+   "2": "100% chance of your attacks not being deflected, +15% attack power against hard targets.",
+   "3": "100% chance of your attacks not being deflected, +30% attack power against hard targets."
+  },
+  "explain": "Your attacks are deflected less and are more powerful against hard monster parts.",
+  "icon_type": "Sharpness",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Sharpness Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/8/8c/MHWA-Sharpness_Skill_Icon.png"
+ },
+ {
+  "name": "Bludgeoner",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "+5% damage dealt when your sharpness gauge is yellow or lower.",
+   "2": "+10% damage dealt when your sharpness gauge is yellow or lower.",
+   "3": "+10% damage dealt when your sharpness gauge is green or lower."
+  },
+  "explain": "Increases damage dealt when your weapon sharpness is low.",
+  "icon_type": "Sharpness",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Sharpness Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/8/8c/MHWA-Sharpness_Skill_Icon.png"
+ },
+ {
+  "name": "Master's Touch",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Grants an 80% chance of no sharpness loss while active."
+  },
+  "explain": "Prevents your weapon from losing sharpness during critical hits.",
+  "icon_type": "Sharpness",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Sharpness Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/8/8c/MHWA-Sharpness_Skill_Icon.png"
+ },
+ {
+  "name": "Normal Shots",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Slightly increases the power of specified ammo and arrows."
+  },
+  "explain": "Increases the attack power of Normal Ammo, normal arrows, and Flying Swallow Shot.",
+  "icon_type": "Ammo",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Ammo Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/57/MHWA-Ammo_Skill_Icon.png"
+ },
+ {
+  "name": "Piercing Shots",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Slightly increases the power of specified ammo and arrows."
+  },
+  "explain": "Increases the attack of the bowgun's Pierce Ammo, and the bow's Dragon Piercer and Thousand Dragons.",
+  "icon_type": "Ammo",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Ammo Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/57/MHWA-Ammo_Skill_Icon.png"
+ },
+ {
+  "name": "Spread/Power Shots",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Slightly increases the power of specified ammo and arrows."
+  },
+  "explain": "Increases the attack of the bowgun's Spread Ammo and the bow's Power Shots and Quick Shots.",
+  "icon_type": "Ammo",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Ammo Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/57/MHWA-Ammo_Skill_Icon.png"
+ },
+ {
+  "name": "Ballistics",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Slightly extends range.",
+   "2": "Extends range.",
+   "3": "Greatly extends critical range, and boosts the power of attacks made within critical range."
+  },
+  "explain": "Extends the range in which ammo and arrows have maximum power. Also boosts power at higher levels.",
+  "icon_type": "Ammo",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Ammo Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/57/MHWA-Ammo_Skill_Icon.png"
+ },
+ {
+  "name": "Rapid Fire Up",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Rapid fire power +5%"
+  },
+  "explain": "Improves light bowgun rapid fire.",
+  "icon_type": "Ammo",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Ammo Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/57/MHWA-Ammo_Skill_Icon.png"
+ },
+ {
+  "name": "Opening Shot",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Moderately increases bowgun reload speed and attack power of ammo when certain conditions are met.",
+   "2": "Increases bowgun reload speed and attack power of ammo when certain conditions are met.",
+   "3": "Greatly increases bowgun reload speed and attack power of ammo when certain conditions are met."
+  },
+  "explain": "Increases the bowgun's reload speed and increases the power of bullets when fully loaded.",
+  "icon_type": "Ammo",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Ammo Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/57/MHWA-Ammo_Skill_Icon.png"
+ },
+ {
+  "name": "Tetrad Shot",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Slightly increases the attack power and affinity of ammo after certain conditions are met.",
+   "2": "Moderately increases attack power and affinity of ammo after certain conditions are met.",
+   "3": "Increases the attack power and affinity of ammo after certain conditions are met."
+  },
+  "explain": "Increases affinity of bowgun ammo/ coatings from the fourth shot and attack of the fourth and sixth shots.",
+  "icon_type": "Ammo",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Ammo Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/57/MHWA-Ammo_Skill_Icon.png"
+ },
+ {
+  "name": "Special Ammo Boost",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 2,
+  "level_effects": {
+   "1": "Moderately increases the power of specified ammo and arrows.",
+   "2": "Increases the power of specified ammo and arrows."
+  },
+  "explain": "Increases the power of the bowgun's special ammo, and the bow's Dragon Piercer, Thousand Dragons, and Tracer.",
+  "icon_type": "Ammo",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Ammo Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/57/MHWA-Ammo_Skill_Icon.png"
+ },
+ {
+  "name": "Poison Functionality",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Lets you use poison coatings."
+  },
+  "explain": "Allows you to apply poison coatings.",
+  "icon_type": "Ammo",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Ammo Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/57/MHWA-Ammo_Skill_Icon.png"
+ },
+ {
+  "name": "Para Functionality",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Lets you use paralysis coatings."
+  },
+  "explain": "Allows you to apply paralysis coatings.",
+  "icon_type": "Ammo",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Ammo Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/57/MHWA-Ammo_Skill_Icon.png"
+ },
+ {
+  "name": "Sleep Functionality",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Lets you use sleep coatings."
+  },
+  "explain": "Allows you to apply sleep coatings.",
+  "icon_type": "Ammo",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Ammo Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/57/MHWA-Ammo_Skill_Icon.png"
+ },
+ {
+  "name": "Blast Functionality",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Lets you use blast coatings."
+  },
+  "explain": "Allows you to apply blast coatings.",
+  "icon_type": "Ammo",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Ammo Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/57/MHWA-Ammo_Skill_Icon.png"
+ },
+ {
+  "name": "Exhaust Functionality",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Lets you use exhaust coatings."
+  },
+  "explain": "Allows you to apply exhaust coatings.",
+  "icon_type": "Ammo",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Ammo Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/57/MHWA-Ammo_Skill_Icon.png"
+ },
+ {
+  "name": "Defense Boost",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 7,
+  "level_effects": {
+   "1": "Defense +5",
+   "2": "Defense +10",
+   "3": "Defense +5% Bonus: +10",
+   "4": "Defense +5% Bonus: +20 All elemental resistances +3",
+   "5": "Defense +8% Bonus: +20 All elemental resistances +3",
+   "6": "Defense +8% Bonus: +35 All elemental resistances +5",
+   "7": "Defense +10% Bonus: +35 All elemental resistances +5"
+  },
+  "explain": "Increases defense. Also improves resistances at higher levels.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Divine Blessing",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "While active, reduces damage taken by 15%.",
+   "2": "While active, reduces damage taken by 30%.",
+   "3": "While active, reduces damage taken by 50%."
+  },
+  "explain": "Has a predetermined chance of reducing the damage you take.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Fire Resistance",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Fire resistance +6",
+   "2": "Fire resistance +12",
+   "3": "Fire resistance +20 Defense +10"
+  },
+  "explain": "Increases fire resistance. Also improves defense at higher levels.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Water Resistance",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Water resistance +6",
+   "2": "Water resistance +12",
+   "3": "Water resistance +20 Defense +10"
+  },
+  "explain": "Increases water resistance. Also improves defense at higher levels.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Thunder Resistance",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Thunder resistance +6",
+   "2": "Thunder resistance +12",
+   "3": "Thunder resistance +20 Defense +10"
+  },
+  "explain": "Increases thunder resistance. Also improves defense at higher levels.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Ice Resistance",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Ice resistance +6",
+   "2": "Ice resistance +12",
+   "3": "Ice resistance +20 Defense +10"
+  },
+  "explain": "Increases ice resistance. Also improves defense at higher levels.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Dragon Resistance",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Dragon resistance +6",
+   "2": "Dragon resistance +12",
+   "3": "Dragon resistance +20 Defense +10"
+  },
+  "explain": "Increases dragon resistance. Also improves defense at higher levels.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Poison Resistance",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Reduces the number of times you take poison damage.",
+   "2": "Greatly reduces the number of times you take poison damage.",
+   "3": "Prevents poison."
+  },
+  "explain": "Reduces damage while poisoned.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Paralysis Resistance",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Reduces the duration of paralysis by 30%.",
+   "2": "Reduces the duration of paralysis by 60%.",
+   "3": "Prevents paralysis."
+  },
+  "explain": "Reduces the duration of paralysis.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Sleep Resistance",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Reduces the duration of sleep by 30%.",
+   "2": "Reduces the duration of sleep by 60%.",
+   "3": "Prevents sleep."
+  },
+  "explain": "Reduces the duration of sleep.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Iron Skin",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Reduces the duration of defense down by 50%.",
+   "2": "Reduces the duration of defense down by 75%.",
+   "3": "Prevents defense down."
+  },
+  "explain": "Grants protection against defense down.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Blight Resistance",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Reduces the duration of all elemental blights by 50%.",
+   "2": "Reduces the duration of all elemental blights by 75%.",
+   "3": "Nullifies all elemental blights."
+  },
+  "explain": "Grants protection against all elemental blights.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Stun Resistance",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Reduces the duration of stun by 30%.",
+   "2": "Reduces the duration of stun by 60%.",
+   "3": "Prevents stun."
+  },
+  "explain": "Reduces the duration of stun.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Bleeding Resistance",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Reduces damage while bleeding.",
+   "2": "Greatly reduces damage while bleeding.",
+   "3": "Prevents bleeding."
+  },
+  "explain": "Grants protection against bleeding.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Bind Resistance",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Allows you to quickly recover from webbed status or frostblight.",
+   "2": "Allows you to very quickly recover from webbed status or frostblight.",
+   "3": "Prevents webbed status and frostblight."
+  },
+  "explain": "Grants protection against webbed status and frostblight.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Blast Resistance",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Delays blastblight and reduces blast damage.",
+   "2": "Greatly delays blastblight and greatly reduces blast damage.",
+   "3": "Prevents blastblight."
+  },
+  "explain": "Grants protection against blastblight.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Stench Resistance",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 2,
+  "level_effects": {
+   "1": "Reduces stench duration by 50%.",
+   "2": "Prevents stench."
+  },
+  "explain": "Grants protection against stench.",
+  "icon_type": "Item",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Item Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/03/MHWA-Item_Skill_Icon.png"
+ },
+ {
+  "name": "Adaptability",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 2,
+  "level_effects": {
+   "1": "Negates the effects of heat and cold.",
+   "2": "Negates environmental damage."
+  },
+  "explain": "Grants protection against environmental damage, such as from heat or cold.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Recovery Up",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Slightly increases recovery.",
+   "2": "Moderately increases recovery.",
+   "3": "Greatly increases recovery."
+  },
+  "explain": "Increases the amount recovered when restoring health.",
+  "icon_type": "Health",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Health Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/1/1b/MHWA-Health_Skill_Icon.png"
+ },
+ {
+  "name": "Recovery Speed",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Doubles the speed at which you heal recoverable damage.",
+   "2": "Triples the speed at which you heal recoverable damage.",
+   "3": "Quadruples the speed at which you heal recoverable damage."
+  },
+  "explain": "Speeds healing of recoverable damage (the red portion of the Health Gauge).",
+  "icon_type": "Health",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Health Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/1/1b/MHWA-Health_Skill_Icon.png"
+ },
+ {
+  "name": "Survival Expert",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Restores 50 health.",
+   "2": "Restores 80 health.",
+   "3": "Restores 100 health."
+  },
+  "explain": "Extra health is recovered from environmental interactables.",
+  "icon_type": "Health",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Health Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/1/1b/MHWA-Health_Skill_Icon.png"
+ },
+ {
+  "name": "Constitution",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 5,
+  "level_effects": {
+   "1": "Reduces fixed stamina depletion by 10%.",
+   "2": "Reduces fixed stamina depletion by 20%.",
+   "3": "Reduces fixed stamina depletion by 30%.",
+   "4": "Reduces fixed stamina depletion by 40%.",
+   "5": "Reduces fixed stamina depletion by 50%."
+  },
+  "explain": "Reduces stamina depletion from evading or performing certain other actions.",
+  "icon_type": "Stamina",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Stamina Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/e/e7/MHWA-Stamina_Skill_Icon.png"
+ },
+ {
+  "name": "Stamina Surge",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Stamina recovery speed +10%",
+   "2": "Stamina recovery speed +30%",
+   "3": "Stamina recovery speed +50%"
+  },
+  "explain": "Speeds up stamina recovery.",
+  "icon_type": "Stamina",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Stamina Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/e/e7/MHWA-Stamina_Skill_Icon.png"
+ },
+ {
+  "name": "Marathon Runner",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Reduces continuous stamina depletion by 15%.",
+   "2": "Reduces continuous stamina depletion by 30%.",
+   "3": "Reduces continuous stamina depletion by 50%."
+  },
+  "explain": "Slows down stamina depletion for actions that continuously drain stamina (such as dashing).",
+  "icon_type": "Stamina",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Stamina Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/e/e7/MHWA-Stamina_Skill_Icon.png"
+ },
+ {
+  "name": "Hunger Resistance",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Extends the time until your stamina cap reduces by 50%.",
+   "2": "Extends the time until your stamina cap reduces by 100%.",
+   "3": "Prevents your stamina cap from decreasing."
+  },
+  "explain": "Reduces maximum stamina depletion over time.",
+  "icon_type": "Stamina",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Stamina Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/e/e7/MHWA-Stamina_Skill_Icon.png"
+ },
+ {
+  "name": "Agitator",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 5,
+  "level_effects": {
+   "1": "Attack +4 and affinity +3% while active.",
+   "2": "Attack +8 and affinity +5% while active.",
+   "3": "Attack +12 and affinity +7% while active.",
+   "4": "Attack +16 and affinity +10% while active.",
+   "5": "Attack +20 and affinity +15% while active."
+  },
+  "explain": "Increases attack power and affinity when large monsters become enraged.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Latent Power",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 5,
+  "level_effects": {
+   "1": "While active, affinity +10% and reduces stamina depletion by 30%.",
+   "2": "While active, affinity +20% and reduces stamina depletion by 30%.",
+   "3": "While active, affinity +30% and reduces stamina depletion by 50%.",
+   "4": "While active, affinity +40% and reduces stamina depletion by 50%.",
+   "5": "While active, affinity +50% and reduces stamina depletion by 50%."
+  },
+  "explain": "Temporarily increases affinity and reduces stamina depletion when certain conditions are met.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Heroics",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 5,
+  "level_effects": {
+   "1": "Defense +50 while active.",
+   "2": "Attack +5% and defense +50 while active.",
+   "3": "Attack +5% and defense +100 while active.",
+   "4": "Attack +10% and defense +100 while active.",
+   "5": "Attack +30% and defense-increasing effects are negated while active."
+  },
+  "explain": "Increases attack power and defense when health drops to 35% or lower.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Burst",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 5,
+  "level_effects": {
+   "1": "On first hit, gain a small temporary attack and element boost, replaced by a larger boost after the fifth hit.",
+   "2": "Hit 5 successive times for a moderate stat boost.",
+   "3": "Hit 5 successive times for a bigger stat boost.",
+   "4": "Hit 5 successive times for an even bigger stat boost.",
+   "5": "Hit 5 successive times for a huge stat boost."
+  },
+  "explain": "Continuously landing hits gradually increases attack and elemental attack. (Amount increased depends on weapon.)",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Foray",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 5,
+  "level_effects": {
+   "1": "Attack +6 against large monsters affected by poison or paralysis.",
+   "2": "Attack +8 and affinity +5% against large monsters affected by poison or paralysis.",
+   "3": "Attack +10 and affinity +10% against large monsters affected by poison or paralysis.",
+   "4": "Attack +12 and affinity +15% against large monsters affected by poison or paralysis.",
+   "5": "Attack +15 and affinity +20% against large monsters affected by poison or paralysis."
+  },
+  "explain": "Increases attack power and affinity against large monsters affected by poison or paralysis.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Flayer",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 5,
+  "level_effects": {
+   "1": "Makes it ever so slightly easier to inflict wounds. Also deals additional non-elemental damage.",
+   "2": "Makes it moderately easier to inflict wounds. Also deals slightly more additional non-elemental damage.",
+   "3": "Makes it easier to inflict wounds. Also deals moderately more additional non-elemental damage.",
+   "4": "Makes it much easier to inflict wounds. Also deals more additional non-elemental damage.",
+   "5": "Makes it significantly easier to inflict wounds. Also deals much more additional non-elemental damage."
+  },
+  "explain": "Makes it easier to inflict wounds. Can also deal extra non-elemental damage upon buildup. (Excludes some attacks.)",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Palico Rally",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 5,
+  "level_effects": {
+   "1": "Increases Palico attack power and defense by 5%.",
+   "2": "Increases Palico attack power and defense by 10%.",
+   "3": "Increases Palico attack power and defense by 15%.",
+   "4": "Increases Palico attack power and defense by 20%.",
+   "5": "Increases Palico attack power and defense by 25%."
+  },
+  "explain": "Powers up Palicoes.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Focus",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Slightly increases gauge fill rate and reduces charge times by 5%.",
+   "2": "Moderately increases gauge fill rate and reduces charge times by 10%.",
+   "3": "Increases gauge fill rate and reduces charge times by 15%."
+  },
+  "explain": "Increases the fill rate for weapons with gauges and the charge rate for weapons with charge attacks.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Power Prolonger",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Moderately boosts the duration weapons are powered up.",
+   "2": "Boosts the duration weapons are powered up.",
+   "3": "Greatly boosts the duration weapons are powered up."
+  },
+  "explain": "Allows long swords, dual blades, insect glaives, switch axes, and charge blades to stay powered up longer.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Punishing Draw",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Draw attacks deal a small amount of stun damage and gain attack +3.",
+   "2": "Draw attacks deal a medium amount of stun damage and gain attack +5.",
+   "3": "Draw attacks deal a large amount of stun damage and gain attack +7."
+  },
+  "explain": "Adds a stun effect to draw attacks and slightly increases attack power. (Not effective while riding.)",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Slugger",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Stun power +20%",
+   "2": "Stun power +30%",
+   "3": "Stun power +40%"
+  },
+  "explain": "Makes it easier to stun monsters.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Stamina Thief",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Exhaust power +20%",
+   "2": "Exhaust power +30%",
+   "3": "Exhaust power +40%"
+  },
+  "explain": "Increases certain attacks' ability to exhaust monsters.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Artillery",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Moderately increases each attack and Wyvern's Fire firing speed. Shelling fire attack +30.",
+   "2": "Increases each attack and Wyvern's Fire firing speed. Shelling fire attack +60.",
+   "3": "Greatly increases each attack and Wyvern's Fire firing speed. Shelling fire attack +90."
+  },
+  "explain": "Strengthens explosive attacks like shells, Wyvern's Fire, charge blade phial attacks, and Sticky Ammo.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Rapid Morph",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Speed +10%",
+   "2": "Speed +20% Morph attack power +10%",
+   "3": "Speed +30% Morph attack power +20%"
+  },
+  "explain": "Increases switch speed and power for switch axes and charge blades.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Partbreaker",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Increases part damage and damage dealt when conditions are met by 10%.",
+   "2": "Increases part damage and damage dealt when conditions are met by 20%.",
+   "3": "Increases part damage and damage dealt when conditions are met by 30%."
+  },
+  "explain": "Makes it easier to break large monster parts, and increases damage dealt when destroying a wound with a Focus Strike.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Coalescence",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "When active, grants a slight increase to elemental attack and status buildup.",
+   "2": "When active, grants an increase to elemental attack and status buildup.",
+   "3": "When active, grants a large increase to elemental attack and status buildup."
+  },
+  "explain": "Temporarily increases elemental attack power and status effects after recovering from blights or abnormal status.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Ambush",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Attack +5% while active.",
+   "2": "Attack +10% while active.",
+   "3": "Attack +15% while active."
+  },
+  "explain": "Temporarily increases damage to large monsters with a successful Sneak Attack.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Antivirus",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Slightly increases recovery rate after contracting the Frenzy. Affinity +3% if cured.",
+   "2": "Increases recovery rate after contracting the Frenzy. Affinity +6% if cured.",
+   "3": "Greatly increases recovery rate after contracting the Frenzy. Affinity +10% if cured."
+  },
+  "explain": "Once infected, makes it easier to overcome the Frenzy and increases affinity if cured.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Elemental Absorption",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "While active, slightly increases elemental attack, and resistance to element taken at activation by 4.",
+   "2": "While active, moderately increases elemental attack, and resistance to element taken at activation by 6.",
+   "3": "While active, increases elemental attack, and resistance to element taken at activation by 8."
+  },
+  "explain": "After taking elemental damage, temporarily grants you element effects. (Cooldown after effect ends)",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Horn Maestro",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 2,
+  "level_effects": {
+   "1": "Extends Melody Effect duration and increases the chance of larger heals from healing melodies.",
+   "2": "Greatly increases the effect duration of hunting horn melodies."
+  },
+  "explain": "Increases the effect duration of hunting horn melodies. (Effect lost when you change weapons.)",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Charge Up",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Activates skill effect."
+  },
+  "explain": "Increases the damage and stun power of charged hammer attacks.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Airborne",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Jumping attack power +10%"
+  },
+  "explain": "Increases the damage caused by jumping attacks.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Self-Improvement",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Activates skill effect."
+  },
+  "explain": "Attack and defense increase as time passes while on a quest. (The maximum is reached after 30 minutes.)",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Poison Duration Up",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Extends the duration of your poison's effect by 20%."
+  },
+  "explain": "Extends the duration of your poison's effect on monsters.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Guard",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Slightly decreases the impact of attacks and reduces stamina depletion by 15%.",
+   "2": "Decreases the impact of attacks and reduces stamina depletion by 30%.",
+   "3": "Greatly decreases the impact of attacks and reduces stamina depletion by 50%."
+  },
+  "explain": "Reduces knockbacks and stamina depletion when guarding.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Evade Window",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 5,
+  "level_effects": {
+   "1": "Very slightly increases invulnerability window.",
+   "2": "Slightly increases invulnerability window.",
+   "3": "Increases invulnerability window.",
+   "4": "Greatly increases invulnerability window.",
+   "5": "Massively increases invulnerability window."
+  },
+  "explain": "Extends the invulnerability period when evading.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Evade Extender",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Slightly extends evasion distance.",
+   "2": "Extends evasion distance.",
+   "3": "Greatly extends evasion distance."
+  },
+  "explain": "Increases evade distance.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Earplugs",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Reduces the effects of weak monster roars.",
+   "2": "Nullifies weak monster roars and reduces the effects of strong monster roars.",
+   "3": "Nullifies weak and strong monster roars."
+  },
+  "explain": "Grants protection from large monsters' roars.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Guard Up",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Reduces damage taken by 10%, plus an additional 20% when conditions are met.",
+   "2": "Reduces damage taken by 20%, plus an additional 30% when conditions are met.",
+   "3": "Reduces damage taken by 30%, plus an additional 50% when conditions are met."
+  },
+  "explain": "Reduces damage taken when guarding and allows you to guard against ordinarily unblockable attacks.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Quick Sheathe",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Slightly increases sheathing speed.",
+   "2": "Increases sheathing speed.",
+   "3": "Greatly increases sheathing speed."
+  },
+  "explain": "Speeds up weapon sheathing.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Windproof",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Negates minor wind pressure and halves the effects of major wind pressure.",
+   "2": "Negates minor and major wind pressure and halves the effects of dragon wind pressure.",
+   "3": "Negates all kinds of wind pressure."
+  },
+  "explain": "Grants protection against wind pressure.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Tremor Resistance",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Nullifies very minor ground tremors and halves effects of minor ground tremors.",
+   "2": "Nullifies up to minor ground tremors and greatly reduces the effects of major ground tremors.",
+   "3": "Nullifies all ground tremors."
+  },
+  "explain": "Grants protection against ground tremors.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Flinch Free",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Prevents knockbacks.",
+   "2": "Prevents knockbacks. Tripping is reduced to a knockback instead.",
+   "3": "Prevents knockbacks and tripping."
+  },
+  "explain": "Prevents knockbacks and other reactions to small damage.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Intimidator",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Discourages monsters from engaging you even if you've been spotted.",
+   "2": "Highly discourages monsters from engaging you even if you've been spotted.",
+   "3": "Prevents monsters from engaging you even if you've been spotted."
+  },
+  "explain": "Reduces the chance small monsters will attack after spotting you. (Has no effect on certain monsters.)",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Speed Eating",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Moderately increases eating speed.",
+   "2": "Increases eating speed.",
+   "3": "Greatly increases eating speed."
+  },
+  "explain": "Increases meat-eating and item-consumption speed.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Load Shells",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 2,
+  "level_effects": {
+   "1": "Increases shell and phial reloading speed.",
+   "2": "Increases shell/phial reloading speed. Gunlance loading capacity +1. Charge blade charges 5 phials on yellow gauge."
+  },
+  "explain": "Improves reloading, and increases the gunlance's shell capacity and charge blade's phial capacity.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Aquatic/Oilsilt Mobility",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 2,
+  "level_effects": {
+   "1": "Negates the effects of muddy streams, nullifies slowing from water and oilsilt, and reduces slowing from drakesbone oil.",
+   "2": "Also negates the effects of waves."
+  },
+  "explain": "Grants resistance against impairments to mobility while in water, oilsilt, or streams.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Shock Absorber",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Activates skill effect."
+  },
+  "explain": "Disables damage reactions when you hit a friend or when a friend hits you.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Leap of Faith",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Enables skill use."
+  },
+  "explain": "Allows you to do a dive-evade when facing towards large monsters and extends the dive-evade distance.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Jump Master",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Negates knockback during jumps."
+  },
+  "explain": "Prevents attacks from knocking you back during a jump.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Cliffhanger",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Reduces stamina depletion while climbing by 50%."
+  },
+  "explain": "Decreases stamina depletion when climbing on vines.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Wide-Range",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 5,
+  "level_effects": {
+   "1": "Items affect nearby allies with 33% of their efficacy.",
+   "2": "Items affect nearby allies in a wider radius with 33% of their efficacy.",
+   "3": "Items affect nearby allies in a wider radius with 66% of their efficacy.",
+   "4": "Items affect nearby allies in a much wider radius with 66% of their efficacy.",
+   "5": "Items affect nearby allies in a much wider radius with full efficacy."
+  },
+  "explain": "Allows the effects of certain items to also affect nearby allies.",
+  "icon_type": "Item",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Item Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/03/MHWA-Item_Skill_Icon.png"
+ },
+ {
+  "name": "Tool Specialist",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 5,
+  "level_effects": {
+   "1": "Shortens recharge time by 10%.",
+   "2": "Shortens recharge time by 20%.",
+   "3": "Shortens recharge time by 30%.",
+   "4": "Shortens recharge time by 40%.",
+   "5": "Shortens recharge time by 50%."
+  },
+  "explain": "Reduces the recharge time for specialized tools.",
+  "icon_type": "Item",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Item Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/03/MHWA-Item_Skill_Icon.png"
+ },
+ {
+  "name": "Bombardier",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Explosive power +10%",
+   "2": "Explosive power +20%",
+   "3": "Explosive power +30%"
+  },
+  "explain": "Increases the damage of explosive items.",
+  "icon_type": "Item",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Item Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/03/MHWA-Item_Skill_Icon.png"
+ },
+ {
+  "name": "Mushroomancer",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Lets you digest blue mushrooms and toadstools.",
+   "2": "Additionally lets you digest nitroshrooms and parashrooms.",
+   "3": "Additionally lets you digest mandragoras, devil's blight, and exciteshrooms."
+  },
+  "explain": "Lets you digest mushrooms that would otherwise be inedible and gain their advantageous effects.",
+  "icon_type": "Item",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Item Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/03/MHWA-Item_Skill_Icon.png"
+ },
+ {
+  "name": "Item Prolonger",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Item effect duration +10%",
+   "2": "Item effect duration +25%",
+   "3": "Item effect duration +50%"
+  },
+  "explain": "Extends the duration of some item effects.",
+  "icon_type": "Item",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Item Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/03/MHWA-Item_Skill_Icon.png"
+ },
+ {
+  "name": "Free Meal",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Activates 10% of the time.",
+   "2": "Activates 25% of the time.",
+   "3": "Activates 45% of the time."
+  },
+  "explain": "Gives you a predetermined chance of consuming a food or drink item for free.",
+  "icon_type": "Item",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Item Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/03/MHWA-Item_Skill_Icon.png"
+ },
+ {
+  "name": "Speed Sharpening",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 2,
+  "level_effects": {
+   "1": "Removes one cycle from the sharpening process.",
+   "2": "Removes two cycles from the sharpening process."
+  },
+  "explain": "Speeds up weapon sharpening when using a whetstone.",
+  "icon_type": "Item",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Item Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/03/MHWA-Item_Skill_Icon.png"
+ },
+ {
+  "name": "Blindsider",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Improves the effectiveness of flash attacks and items."
+  },
+  "explain": "Improves the effectiveness of flash attacks and items.",
+  "icon_type": "Item",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Item Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/03/MHWA-Item_Skill_Icon.png"
+ },
+ {
+  "name": "Botanist",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 4,
+  "level_effects": {
+   "1": "One extra consumable herb item per gather.",
+   "2": "Additionally adds one extra consumable fruit, nut, or seed item per gather.",
+   "3": "Additionally adds one extra consumable insect item per gather.",
+   "4": "Additionally adds one extra consumable mushroom item per gather."
+  },
+  "explain": "Increases the quantity of herbs and other consumable items you gather.",
+  "icon_type": "Gathering",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Gathering Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/01/MHWA-Gathering_Skill_Icon.png"
+ },
+ {
+  "name": "Geologist",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 3,
+  "level_effects": {
+   "1": "One extra item when gathering from bonepiles.",
+   "2": "Additionally adds one extra item when gathering special items.",
+   "3": "Additionally adds one extra item when gathering from mining outcrops."
+  },
+  "explain": "Increases the number of items you gain at gathering points.",
+  "icon_type": "Gathering",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Gathering Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/01/MHWA-Gathering_Skill_Icon.png"
+ },
+ {
+  "name": "Entomologist",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Activates skill effect."
+  },
+  "explain": "The bodies of small insect monsters won't be destroyed, allowing them to be carved. (Excludes some.)",
+  "icon_type": "Gathering",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Gathering Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/01/MHWA-Gathering_Skill_Icon.png"
+ },
+ {
+  "name": "Outdoorsman",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Improves fishing, grilling, and transporting abilities."
+  },
+  "explain": "Improves fishing, grilling, and transporting abilities.",
+  "icon_type": "Gathering",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Gathering Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/01/MHWA-Gathering_Skill_Icon.png"
+ },
+ {
+  "name": "Neopteron Alert",
+  "category": "skill",
+  "skill_category": "group",
+  "max_level": 1,
+  "level_effects": {
+   "3": "Increases the amount of honey you gain from gathering points."
+  },
+  "explain": null,
+  "icon_type": "Group",
+  "set_skill_level_names": {
+   "3": "Honey Hunter"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Group Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/6/65/MHWA-Group_Skill_Icon.png"
+ },
+ {
+  "name": "Neopteron Camouflage",
+  "category": "skill",
+  "skill_category": "group",
+  "max_level": 1,
+  "level_effects": {
+   "3": "Increases movement speed while crouching, and makes it easier to escape large monsters' detection."
+  },
+  "explain": null,
+  "icon_type": "Group",
+  "set_skill_level_names": {
+   "3": "Fleetfoot"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Group Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/6/65/MHWA-Group_Skill_Icon.png"
+ },
+ {
+  "name": "Scaling Prowess",
+  "category": "skill",
+  "skill_category": "group",
+  "max_level": 1,
+  "level_effects": {
+   "3": "Makes it easier to mount monsters and to wound them once mounted."
+  },
+  "explain": null,
+  "icon_type": "Group",
+  "set_skill_level_names": {
+   "3": "Master Mounter"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Group Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/6/65/MHWA-Group_Skill_Icon.png"
+ },
+ {
+  "name": "Scale Layering",
+  "category": "skill",
+  "skill_category": "group",
+  "max_level": 1,
+  "level_effects": {
+   "3": "Temporarily reduces stamina depletion when health is at 40% or lower."
+  },
+  "explain": null,
+  "icon_type": "Group",
+  "set_skill_level_names": {
+   "3": "Adrenaline"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Group Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/6/65/MHWA-Group_Skill_Icon.png"
+ },
+ {
+  "name": "Flexible Leathercraft",
+  "category": "skill",
+  "skill_category": "group",
+  "max_level": 1,
+  "level_effects": {
+   "3": "Increases gathering speed, and prevents knock back when gathering or carving."
+  },
+  "explain": null,
+  "icon_type": "Group",
+  "set_skill_level_names": {
+   "3": "Hunter Gatherer"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Group Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/6/65/MHWA-Group_Skill_Icon.png"
+ },
+ {
+  "name": "Buttery Leathercraft",
+  "category": "skill",
+  "skill_category": "group",
+  "max_level": 1,
+  "level_effects": {
+   "3": "Increases your affinity temporarily when sliding on terrain."
+  },
+  "explain": null,
+  "icon_type": "Group",
+  "set_skill_level_names": {
+   "3": "Affinity Sliding"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Group Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/6/65/MHWA-Group_Skill_Icon.png"
+ },
+ {
+  "name": "Fortifying Pelt",
+  "category": "skill",
+  "skill_category": "group",
+  "max_level": 1,
+  "level_effects": {
+   "3": "Increases attack and defense after fainting during a quest. (Can be used twice.)"
+  },
+  "explain": null,
+  "icon_type": "Group",
+  "set_skill_level_names": {
+   "3": "Fortify"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Group Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/6/65/MHWA-Group_Skill_Icon.png"
+ },
+ {
+  "name": "Alluring Pelt",
+  "category": "skill",
+  "skill_category": "group",
+  "max_level": 1,
+  "level_effects": {
+   "3": "Increases the attention drawn to you when attacking a monster."
+  },
+  "explain": null,
+  "icon_type": "Group",
+  "set_skill_level_names": {
+   "3": "Diversion"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Group Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/6/65/MHWA-Group_Skill_Icon.png"
+ },
+ {
+  "name": "Lord's Favor",
+  "category": "skill",
+  "skill_category": "group",
+  "max_level": 1,
+  "level_effects": {
+   "3": "Temporarily increases attack power when using effects like Melody Effects that affect companions in range."
+  },
+  "explain": null,
+  "icon_type": "Group",
+  "set_skill_level_names": {
+   "3": "Inspiration"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Group Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/6/65/MHWA-Group_Skill_Icon.png"
+ },
+ {
+  "name": "Lord's Fury",
+  "category": "skill",
+  "skill_category": "group",
+  "max_level": 1,
+  "level_effects": {
+   "3": "Increases attack when inflicted with ailments."
+  },
+  "explain": null,
+  "icon_type": "Group",
+  "set_skill_level_names": {
+   "3": "Resuscitate"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Group Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/6/65/MHWA-Group_Skill_Icon.png"
+ },
+ {
+  "name": "Guardian's Pulse",
+  "category": "skill",
+  "skill_category": "group",
+  "max_level": 1,
+  "level_effects": {
+   "3": "Increases recovery speed of stamina and red gauge when near Wylkrystals."
+  },
+  "explain": null,
+  "icon_type": "Group",
+  "set_skill_level_names": {
+   "3": "Wylk Burst"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Group Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/6/65/MHWA-Group_Skill_Icon.png"
+ },
+ {
+  "name": "Guardian's Protection",
+  "category": "skill",
+  "skill_category": "group",
+  "max_level": 1,
+  "level_effects": {
+   "3": "Reduces elemental and unique damage while in the Ruins of Wyveria."
+  },
+  "explain": null,
+  "icon_type": "Group",
+  "set_skill_level_names": {
+   "3": "Ward of Wyveria"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Group Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/6/65/MHWA-Group_Skill_Icon.png"
+ },
+ {
+  "name": "Imparted Wisdom",
+  "category": "skill",
+  "skill_category": "group",
+  "max_level": 1,
+  "level_effects": {
+   "3": "Increases the chance of finding rare gathering points."
+  },
+  "explain": null,
+  "icon_type": "Group",
+  "set_skill_level_names": {
+   "3": "Forager's Luck"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Group Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/6/65/MHWA-Group_Skill_Icon.png"
+ },
+ {
+  "name": "Doshaguma's Might",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Temporarily grants attack +10 after a successful Power Clash or Offset attack",
+   "4": "Temporarily grants attack +25 after a successful Power Clash or Offset attack"
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Powerhouse I",
+   "4": "Powerhouse II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Rathalos's Flare",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Chance to deal additional fire damage after landing an attack.",
+   "4": "Increases additional fire damage after landing an attack."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Scorcher I",
+   "4": "Scorcher II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Xu Wu's Vigor",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Temporarily grants attack +15 after eating items such as well-done steak.",
+   "4": "Temporarily grants attack +30 after eating items such as well-done steak."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Protein Fiend I",
+   "4": "Protein Fiend II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Gravios's Protection",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Reduces the damage you take by 20% when your health is full.",
+   "4": "Reduces the damage you take by 35% when your health is full."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Flawless Armor I",
+   "4": "Flawless Armor II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Blangonga's Spirit",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Using the <BOLD>To Victory!</BOLD> gesture moderately  increases attack temporarily to nearby allies. Greatly effects Palicoes and Support Hunters.",
+   "4": "Using the <BOLD>To Victory!</BOLD> gesture increases attack temporarily to nearby allies. Greatly effects Palicoes and Support Hunters."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "War Cry I",
+   "4": "War Cry II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Ebony Odogaron's Power",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Extends the duration of the Burst skill and grants attack +8 while Burst is active.",
+   "4": "Further extends the duration of the Burst skill and grants attack +18 while Burst is active."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Burst Boost I",
+   "4": "Burst Boost II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Fulgur Anjanath's Will",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Grants an additional Stamina Gauge.",
+   "4": "Grants an additional long Stamina Gauge."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Second Wind I",
+   "4": "Second Wind II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Uth Duna's Cover",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Increases defense temporarily when using a specialized tool.",
+   "4": "Greatly increases defense and resistance temporarily when using a specialized tool."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Protective Veil I",
+   "4": "Protective Veil II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Rey Dau's Voltage",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Moderately extends the activation time of the Latent Power skill.",
+   "4": "Extends the activation time of the Latent Power skill."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Thunderous Roar I",
+   "4": "Thunderous Roar II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Nu Udra's Mutiny",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Deals moderate additional damage while the Resentment skill is active.",
+   "4": "Deals additional damage while the Resentment skill is active."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Bad Blood I",
+   "4": "Bad Blood II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Jin Dahaad's Revolt",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Increases attack after recovering from webbed status, frostblight, being pinned, or a Power Clash.",
+   "4": "Greatly increases attack after recovering from webbed status, frostblight, being pinned, or a Power Clash."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Binding Counter I",
+   "4": "Binding Counter II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Gore Magala's Tyranny",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Infects you with Frenzy when against large monsters.",
+   "4": "Infects you with Frenzy and raises attack when against large monsters. Attack power increases upon recovery."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Black Eclipse I",
+   "4": "Black Eclipse II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Arkveld's Hunger",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Regenerates a small amount of your health as you continually attack a monster. Recovery varies by weapon.",
+   "4": "Regenerates your health as you continually attack a monster. Recovery varies by weapon."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Hasten Recovery I",
+   "4": "Hasten Recovery II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Guardian Arkveld's Vitality",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Restores a moderate amount of health when destroying a wound on a large monster.",
+   "4": "Restores health when destroying a wound on a large monster."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Decimator I",
+   "4": "Decimator II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Mizutsune's Prowess",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Prevents major bubbleblight and grants you minor bubbleblight after evading several times.",
+   "4": "In addition to previous effects, also increases evasion while afflicted with bubbleblight."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Bubbly Dance I",
+   "4": "Bubbly Dance II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Slicked Blade",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 3,
+  "level_effects": {
+   "1": "Affinity +3% when wet, and +7% while afflicted with bubbleblight.",
+   "2": "Affinity +6% when wet, and +14% while afflicted with bubbleblight.",
+   "3": "Affinity +9% when wet, and +21% while afflicted with bubbleblight."
+  },
+  "explain": "Temporarily increases affinity when wet or when inflicted with bubbleblight. (Wet and bubbleblight effects stack.)",
+  "icon_type": "Affinity",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Affinity Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/a/a2/MHWA-Affinity_Skill_Icon.png"
+ },
+ {
+  "name": "Zoh Shia's Pulse",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Allows the Health Gauge to continue to slowly recover up to the max value, even if there is no red portion.",
+   "4": "Allows the Health Gauge to continue to recover up to the max value, even if there is no red portion."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Super Recovery I",
+   "4": "Super Recovery II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Whiteflame Torrent",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Activates skill effect. (When used with Scorcher, does not stack but adds extra fire damage.)"
+  },
+  "explain": "Chance to deal additional damage after landing an attack.",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Lord's Soul",
+  "category": "skill",
+  "skill_category": "group",
+  "max_level": 1,
+  "level_effects": {
+   "3": "Boosts attack and lowers defense but lets you survive one lethal hit. Afterwards, boosts defense and res."
+  },
+  "explain": null,
+  "icon_type": "Group",
+  "set_skill_level_names": {
+   "3": "Guts (Tenacity)"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Group Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/6/65/MHWA-Group_Skill_Icon.png"
+ },
+ {
+  "name": "Blossomdance Prayer",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "During Blossomdance, adds special items to quest rewards. (No effect when joining mid-quest.)",
+   "4": "During Blossomdance, adds special items to quest rewards, and greatly boosts attack and defense."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Blossomdance Boon I",
+   "4": "Blossomdance Boon II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Master of the Fist",
+  "category": "skill",
+  "skill_category": "group",
+  "max_level": 1,
+  "level_effects": {
+   "3": "Increases power of special actions. Drive Impacts can trigger offset attacks. Further increases power of offset attacks."
+  },
+  "explain": null,
+  "icon_type": "Group",
+  "set_skill_level_names": {
+   "3": "Satsui no Hado"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Group Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/6/65/MHWA-Group_Skill_Icon.png"
+ },
+ {
+  "name": "Rice Ball",
+  "category": "skill",
+  "skill_category": "armor",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Activates skill effect."
+  },
+  "explain": "Increases the attack power of Akuma actions and stun damage.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Leviathan's Fury",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Temporarily increases affinity and can deal extra thunder damage upon buildup. (Excludes some attacks.)",
+   "4": "Further increases additional thunder damage and moderately extends the duration affinity is increased."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Azure Bolt I",
+   "4": "Azure Bolt II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Convert Thunder Resistance",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Activates skill effect."
+  },
+  "explain": "Increases your weapon's elemental attack proportional to your thunder resistance.",
+  "icon_type": "Element",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Element Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/b/b2/MHWA-Element_Skill_Icon.png"
+ },
+ {
+  "name": "Seregios's Tenacity",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Extends the duration of Adrenaline Rush. If triggered again while the skill is active, extends the effect duration once.",
+   "4": "Additionally, if triggered again while the skill is active, further increases attack."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Razor's Edge I",
+   "4": "Razor's Edge II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Bladescale Honing",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Activates skill effect."
+  },
+  "explain": "Narrowly evading a monster's attack while your weapon is drawn grants special sharpness.",
+  "icon_type": "Sharpness",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Sharpness Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/8/8c/MHWA-Sharpness_Skill_Icon.png"
+ },
+ {
+  "name": "Bladescale Loading",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Activates skill effect."
+  },
+  "explain": "Narrowly evading a monster's attack while your weapon is drawn grants special loaded ammo or applied coatings.",
+  "icon_type": "Ammo",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Ammo Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/57/MHWA-Ammo_Skill_Icon.png"
+ },
+ {
+  "name": "Festival Spirit",
+  "category": "skill",
+  "skill_category": "group",
+  "max_level": 1,
+  "level_effects": {
+   "3": "Lets you carve one additional time from carcasses during quests. (No effect when joining mid-quest.)"
+  },
+  "explain": null,
+  "icon_type": "Group",
+  "set_skill_level_names": {
+   "3": "Carving Master"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Group Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/6/65/MHWA-Group_Skill_Icon.png"
+ },
+ {
+  "name": "Flamefete Prayer",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "During Flamefete, adds special items to quest rewards. (No effect when joining mid-quest.)",
+   "4": "During Flamefete, adds special items to quest rewards, and greatly boosts attack and defense."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Flamefete Boon I",
+   "4": "Flamefete Boon II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Dreamspell Prayer",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "During Dreamspell, adds special items to quest rewards. (No effect when joining mid-quest.)",
+   "4": "During Dreamspell, adds special items to quest rewards, and greatly boosts attack and defense."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Dreamspell Boon I",
+   "4": "Dreamspell Boon II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Lumenhymn Prayer",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "During Lumenhymn, adds special items to quest rewards. (No effect when joining mid-quest.)",
+   "4": "During Lumenhymn, adds special items to quest rewards, and greatly boosts attack and defense."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Lumenhymn Boon I",
+   "4": "Lumenhymn Boon II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Glory's Favor",
+  "category": "skill",
+  "skill_category": "group",
+  "max_level": 1,
+  "level_effects": {
+   "3": "Increases quest target rewards. (No effect when joining mid-quest.)"
+  },
+  "explain": null,
+  "icon_type": "Group",
+  "set_skill_level_names": {
+   "3": "Luck"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Group Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/6/65/MHWA-Group_Skill_Icon.png"
+ },
+ {
+  "name": "Power Stone",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Mining particularly rare materials greatly increases attack. (Attack increase has a maximum limit.)"
+  },
+  "explain": "Temporarily increases attack upon mining materials.",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Crackling Cornpopper",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Activates skill effect."
+  },
+  "explain": "Increases shelling power and fire attack while the Wyvern's Fire Gauge is blinking red.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Grillmaster",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Activates skill effect."
+  },
+  "explain": "Grill meat to sharpen your weapon and temporarily increase your attack. (Duration and effect vary based on results.)",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Evading Reload",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Activates skill effect."
+  },
+  "explain": "Evading loads the currently selected ammo automatically.",
+  "icon_type": "Ammo",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Ammo Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/57/MHWA-Ammo_Skill_Icon.png"
+ },
+ {
+  "name": "Darkside",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Activates skill effect. (Requires activation cooldown, but self-damage still occurs.)"
+  },
+  "explain": "Performing certain Lvl 2 or higher charged slashes deals self-damage. Attack is also temporarily boosted.",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Synthetic Shield",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Activates skill effect."
+  },
+  "explain": "Temporarily increases your defense and the defense of those around you after a successful Perfect Guard.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Synergy",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Activates skill effect."
+  },
+  "explain": "Temporarily increases your affinity and the affinity of those around you after using a Rising Spiral Slash.",
+  "icon_type": "Affinity",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Affinity Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/a/a2/MHWA-Affinity_Skill_Icon.png"
+ },
+ {
+  "name": "Soul of the Dark Knight",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Having recoverable damage increases elemental attack, and some great sword Lvl 3 charged slashes are strengthened.",
+   "4": "Allows you to perform the special action: The Blackest Night."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Dark Arts",
+   "4": "The Blackest Night"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Omega Resonance",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "(When quest starts) Local and Remote Resonance alternate, increasing attack or affinity when conditions are met.",
+   "4": "Increases the effect of Resonance I, and the effect of the weapon skill Synthetic Shield or the effect of Synergy."
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Resonance I",
+   "4": "Resonance II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Catburglar",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Activates skill effect."
+  },
+  "explain": "Grants a small chance of obtaining various items when landing critical hits.",
+  "icon_type": "Gathering",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Gathering Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/01/MHWA-Gathering_Skill_Icon.png"
+ },
+ {
+  "name": "Gogmapocalypse",
+  "category": "skill",
+  "skill_category": "set",
+  "max_level": 2,
+  "level_effects": {
+   "2": "Increases elemental attack when large monsters become enraged.",
+   "4": "Level I effect is increased, and you gain a temporary damage barrier. (Barrier reactivates after cooldown.)"
+  },
+  "explain": null,
+  "icon_type": "Set",
+  "set_skill_level_names": {
+   "2": "Mutual Hostility I",
+   "4": "Mutual Hostility II"
+  },
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Set Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/7/7f/MHWA-Set_Skill_Icon.png"
+ },
+ {
+  "name": "Convert Water Resistance",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Activates skill effect."
+  },
+  "explain": "Increases your weapon's elemental attack proportional to your water resistance.",
+  "icon_type": "Element",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Element Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/b/b2/MHWA-Element_Skill_Icon.png"
+ },
+ {
+  "name": "Shattering Reflection",
+  "category": "skill",
+  "skill_category": "weapon",
+  "max_level": 1,
+  "level_effects": {
+   "1": "Activates skill effect."
+  },
+  "explain": "Level 3 charged slashes deal area-of-effect damage upon hitting the ground.",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": null,
+  "granted_by_ingredients": null,
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Defender Meal (Lo)",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Sometimes decreases damage taken.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": [],
+  "granted_by_ingredients": [
+   "Kunafa Cheese"
+  ],
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Defender Meal (Hi)",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Often decreases damage taken.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Springy Kunafa Cuisine",
+   "Blossomdance Sushi Meal"
+  ],
+  "granted_by_ingredients": [
+   "Sharp Kunafa Cheese"
+  ],
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Black Belt Meal (Lo)",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Reduces stamina depletion when performing stamina-draining moves such as evading, etc.",
+  "icon_type": "Stamina",
+  "set_skill_level_names": {},
+  "granted_by_meals": [],
+  "granted_by_ingredients": [
+   "Droolshroom"
+  ],
+  "image_file": "MHWilds-Stamina Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/e/e7/MHWA-Stamina_Skill_Icon.png"
+ },
+ {
+  "name": "Black Belt Meal (Hi)",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Greatly reduces stamina depletion when performing stamina-draining moves such as evading, etc.",
+  "icon_type": "Stamina",
+  "set_skill_level_names": {},
+  "granted_by_meals": [],
+  "granted_by_ingredients": [
+   "Delishroom"
+  ],
+  "image_file": "MHWilds-Stamina Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/e/e7/MHWA-Stamina_Skill_Icon.png"
+ },
+ {
+  "name": "Tumbler Meal (Lo)",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Slightly extends the invulnerability period when evading.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": [],
+  "granted_by_ingredients": [
+   "Mud Shrimp"
+  ],
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Tumbler Meal (Hi)",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Extends the invulnerability period when evading.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Hot Azuz Cuisine"
+  ],
+  "granted_by_ingredients": [
+   "Turbid Shrimp"
+  ],
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Moxie Meal (Lo)",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Prevents fainting one time when damage taken exceeds your remaining health.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": [],
+  "granted_by_ingredients": [
+   "Sild Garlic"
+  ],
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Moxie Meal (Hi)",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Prevents fainting one time and heals you when damage taken exceeds your remaining health.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Fresh Sild Cuisine",
+   "Flamefete Barbecue Meal"
+  ],
+  "granted_by_ingredients": [
+   "Specialty Sild Garlic"
+  ],
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Caprice Meal (Lo)",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Repeatedly activates a temporary attack boost at random intervals.",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": [],
+  "granted_by_ingredients": [
+   "Fluffy Egg"
+  ],
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Caprice Meal (Hi)",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Repeatedly activates a large temporary attack boost at random intervals.",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Colorful Suja Cuisine"
+  ],
+  "granted_by_ingredients": [
+   "Airy Egg"
+  ],
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Immunizer Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Lessens the effects of various ailments.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Lumenhymn Ceremonial Platter"
+  ],
+  "granted_by_ingredients": [
+   "Wild Herb"
+  ],
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Medic Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Increases the amount of health recovered when healing.",
+  "icon_type": "Health",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Dreamspell Tea Time Stand"
+  ],
+  "granted_by_ingredients": [
+   "Eastern Honey"
+  ],
+  "image_file": "MHWilds-Health Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/1/1b/MHWA-Health_Skill_Icon.png"
+ },
+ {
+  "name": "Sizzling Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Negates the effects of hot or cold conditions and increases defense while in such areas.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Classic Tonkotsu Ramen",
+   "100% Tonkotsu-Free Ramen"
+  ],
+  "granted_by_ingredients": [
+   "Monster Chili"
+  ],
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Swimmer Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Increases attack when wet.",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Flamefete Barbecue Meal"
+  ],
+  "granted_by_ingredients": [
+   "Jeweled Mullet Roe"
+  ],
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Specialist Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Increases the potency of abnormal status attacks.",
+  "icon_type": "Element",
+  "set_skill_level_names": {},
+  "granted_by_meals": [],
+  "granted_by_ingredients": [
+   "Wild Seed Oil"
+  ],
+  "image_file": "MHWilds-Element Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/b/b2/MHWA-Element_Skill_Icon.png"
+ },
+ {
+  "name": "Gatherer Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Sometimes increases the number of resources per gather of bones, ore, and other gatherable items.",
+  "icon_type": "Gathering",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Blossomdance Sushi Meal"
+  ],
+  "granted_by_ingredients": [
+   "Truffle Du Conga"
+  ],
+  "image_file": "MHWilds-Gathering Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/01/MHWA-Gathering_Skill_Icon.png"
+ },
+ {
+  "name": "Insurance Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Prevents your group from being penalized the first time a member faints.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Springy Kunafa Cuisine",
+   "Hot Azuz Cuisine",
+   "Fresh Sild Cuisine",
+   "Colorful Suja Cuisine",
+   "Dreamspell Tea Time Stand",
+   "Lumenhymn Ceremonial Platter"
+  ],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Lucky Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Sometimes increases the number of reward items received at the end of a quest.",
+  "icon_type": "Gathering",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Springy Kunafa Cuisine"
+  ],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Gathering Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/01/MHWA-Gathering_Skill_Icon.png"
+ },
+ {
+  "name": "Carver Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Allows you to carve an additional one or two times.",
+  "icon_type": "Gathering",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Hot Azuz Cuisine"
+  ],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Gathering Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/01/MHWA-Gathering_Skill_Icon.png"
+ },
+ {
+  "name": "Capture Pro Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Increases the rewards you receive for captures.",
+  "icon_type": "Gathering",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Fresh Sild Cuisine"
+  ],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Gathering Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/01/MHWA-Gathering_Skill_Icon.png"
+ },
+ {
+  "name": "Exploiter Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Increases the rewards you receive for fully exploiting a wound.",
+  "icon_type": "Gathering",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Colorful Suja Cuisine"
+  ],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Gathering Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/01/MHWA-Gathering_Skill_Icon.png"
+ },
+ {
+  "name": "Rider Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Makes it easier to mount monsters.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": [],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Riser Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Extends the invulnerability period when getting up.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Blossomdance Sushi Meal"
+  ],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Iron Carver Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Prevents knockbacks from attacks while carving.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": [],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Escape Artist Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Decreases stamina depletion when fleeing from large monsters.",
+  "icon_type": "Stamina",
+  "set_skill_level_names": {},
+  "granted_by_meals": [],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Stamina Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/e/e7/MHWA-Stamina_Skill_Icon.png"
+ },
+ {
+  "name": "Balanced Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Prevents you from getting knocked on your butt.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Flamefete Barbecue Meal"
+  ],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Trainer Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Speeds up Palico growth.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": [],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Bulldozer Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Increases attack power when you strike right after an attack is deflected.",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": [],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Hardy Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Prevents damage and ailments from the environment.",
+  "icon_type": "Defense",
+  "set_skill_level_names": {},
+  "granted_by_meals": [],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Defense Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/f/f1/MHWA-Defense_Skill_Icon.png"
+ },
+ {
+  "name": "Piping-Hot Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Greatly increases attack when health is dangerously low.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": [],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Break-time Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Grants a temporary attack boost when you use the Sit gesture for a while.",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Dreamspell Tea Time Stand"
+  ],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Fortune Hunter Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Increases the amount of zenny received at the end of a quest.",
+  "icon_type": "Gathering",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Lumenhymn Ceremonial Platter"
+  ],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Gathering Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/01/MHWA-Gathering_Skill_Icon.png"
+ },
+ {
+  "name": "Fisher Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Increases the likelihood that fish will bite when fishing.",
+  "icon_type": "Reinforce",
+  "set_skill_level_names": {},
+  "granted_by_meals": [],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Reinforce Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/5/51/MHWA-Reinforce_Skill_Icon.png"
+ },
+ {
+  "name": "Top Cat Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Powers up Palico attack and defense.",
+  "icon_type": "Empower",
+  "set_skill_level_names": {},
+  "granted_by_meals": [],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Empower Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/2/25/MHWA-Empower_Skill_Icon.png"
+ },
+ {
+  "name": "Extra Noodles Meal",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "The first two food or drink items used in a quest can be used an extra time.",
+  "icon_type": "Item",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Classic Tonkotsu Ramen",
+   "100% Tonkotsu-Free Ramen"
+  ],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Item Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/0/03/MHWA-Item_Skill_Icon.png"
+ },
+ {
+  "name": "Spicy Red Meal (Attack)",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Using a food or drink item temporarily boosts Focus Strike wound destruction damage and part damage.",
+  "icon_type": "Attack",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "Classic Tonkotsu Ramen"
+  ],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Attack Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/4/44/MHWA-Attack_Skill_Icon.png"
+ },
+ {
+  "name": "Spicy Red Meal (Energy)",
+  "category": "skill",
+  "skill_category": "food",
+  "max_level": null,
+  "level_effects": {},
+  "explain": "Using a food or drink item temporarily boosts stamina recovery speed.",
+  "icon_type": "Stamina",
+  "set_skill_level_names": {},
+  "granted_by_meals": [
+   "100% Tonkotsu-Free Ramen"
+  ],
+  "granted_by_ingredients": [],
+  "image_file": "MHWilds-Stamina Skill Icon.png",
+  "image_url": "https://monsterhunterwiki.org/images/e/e7/MHWA-Stamina_Skill_Icon.png"
+ }
+]

@@ -1,0 +1,1623 @@
+[
+	{
+		"Name": "Unknown Charm",
+		"Description": "A talisman of indeterminable age. Said to draw out the holder's hidden strengths.",
+		"Level": 1,
+		"Price": 3000,
+		"Rarity": 5,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 1
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 6
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 6
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 3,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Unknown Charm",
+		"Description": "A talisman of indeterminable age. Said to draw out the holder's hidden strengths.",
+		"Level": 1,
+		"Price": 3000,
+		"Rarity": 5,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 1
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 7
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 3,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Unknown Charm",
+		"Description": "A talisman of indeterminable age. Said to draw out the holder's hidden strengths.",
+		"Level": 1,
+		"Price": 3000,
+		"Rarity": 5,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 1
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 8
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 6
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 3,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Unknown Charm",
+		"Description": "A talisman of indeterminable age. Said to draw out the holder's hidden strengths.",
+		"Level": 1,
+		"Price": 3000,
+		"Rarity": 5,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 1
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 8
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 8
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 3,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Unknown Charm",
+		"Description": "A talisman of indeterminable age. Said to draw out the holder's hidden strengths.",
+		"Level": 1,
+		"Price": 3000,
+		"Rarity": 5,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 1
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 9
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 3,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Unknown Charm",
+		"Description": "A talisman of indeterminable age. Said to draw out the holder's hidden strengths.",
+		"Level": 1,
+		"Price": 3000,
+		"Rarity": 5,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 1
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 10
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 3,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Historical Charm",
+		"Description": "An odd talisman that was written about in historical texts. Its glow contains the depths of the past.",
+		"Level": 1,
+		"Price": 6000,
+		"Rarity": 6,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 1
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 1
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 7
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Historical Charm",
+		"Description": "An odd talisman that was written about in historical texts. Its glow contains the depths of the past.",
+		"Level": 1,
+		"Price": 6000,
+		"Rarity": 6,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 1
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 1
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 10
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Historical Charm",
+		"Description": "An odd talisman that was written about in historical texts. Its glow contains the depths of the past.",
+		"Level": 1,
+		"Price": 6000,
+		"Rarity": 6,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 2
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 6
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 6
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Historical Charm",
+		"Description": "An odd talisman that was written about in historical texts. Its glow contains the depths of the past.",
+		"Level": 1,
+		"Price": 6000,
+		"Rarity": 6,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 2
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 8
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 6
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Historical Charm",
+		"Description": "An odd talisman that was written about in historical texts. Its glow contains the depths of the past.",
+		"Level": 1,
+		"Price": 6000,
+		"Rarity": 6,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 2
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 8
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 8
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Historical Charm",
+		"Description": "An odd talisman that was written about in historical texts. Its glow contains the depths of the past.",
+		"Level": 1,
+		"Price": 6000,
+		"Rarity": 6,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 2
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 9
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Historical Charm",
+		"Description": "An odd talisman that was written about in historical texts. Its glow contains the depths of the past.",
+		"Level": 1,
+		"Price": 6000,
+		"Rarity": 6,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 2
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 10
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Secret Charm",
+		"Description": "A talisman containing untold secrets of history. The holder will one day see the world's abyss.",
+		"Level": 1,
+		"Price": 9000,
+		"Rarity": 7,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 2
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 1
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 7
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Secret Charm",
+		"Description": "A talisman containing untold secrets of history. The holder will one day see the world's abyss.",
+		"Level": 1,
+		"Price": 9000,
+		"Rarity": 7,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 2
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 1
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 8
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 3,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Secret Charm",
+		"Description": "A talisman containing untold secrets of history. The holder will one day see the world's abyss.",
+		"Level": 1,
+		"Price": 9000,
+		"Rarity": 7,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 2
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 1
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 10
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Secret Charm",
+		"Description": "A talisman containing untold secrets of history. The holder will one day see the world's abyss.",
+		"Level": 1,
+		"Price": 9000,
+		"Rarity": 7,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 3
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 6
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 5
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Secret Charm",
+		"Description": "A talisman containing untold secrets of history. The holder will one day see the world's abyss.",
+		"Level": 1,
+		"Price": 9000,
+		"Rarity": 7,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 3
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 7
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Secret Charm",
+		"Description": "A talisman containing untold secrets of history. The holder will one day see the world's abyss.",
+		"Level": 1,
+		"Price": 9000,
+		"Rarity": 7,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 3
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 8
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 5
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Secret Charm",
+		"Description": "A talisman containing untold secrets of history. The holder will one day see the world's abyss.",
+		"Level": 1,
+		"Price": 9000,
+		"Rarity": 7,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 3
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 10
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Secret Charm",
+		"Description": "A talisman containing untold secrets of history. The holder will one day see the world's abyss.",
+		"Level": 1,
+		"Price": 9000,
+		"Rarity": 7,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 4
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 1
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 1
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 2,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Golden Age Charm",
+		"Description": "A talisman inscribed with the wisdom of an advanced culture. Offers a glimpse into an era of legends.",
+		"Level": 1,
+		"Price": 16000,
+		"Rarity": 8,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 2
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 1
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 7
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 3,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Golden Age Charm",
+		"Description": "A talisman inscribed with the wisdom of an advanced culture. Offers a glimpse into an era of legends.",
+		"Level": 1,
+		"Price": 16000,
+		"Rarity": 8,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 2
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 1
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 8
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 3,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Golden Age Charm",
+		"Description": "A talisman inscribed with the wisdom of an advanced culture. Offers a glimpse into an era of legends.",
+		"Level": 1,
+		"Price": 16000,
+		"Rarity": 8,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 2
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 1
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 10
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 3,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Golden Age Charm",
+		"Description": "A talisman inscribed with the wisdom of an advanced culture. Offers a glimpse into an era of legends.",
+		"Level": 1,
+		"Price": 16000,
+		"Rarity": 8,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 3
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 6
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 5
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 3,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Golden Age Charm",
+		"Description": "A talisman inscribed with the wisdom of an advanced culture. Offers a glimpse into an era of legends.",
+		"Level": 1,
+		"Price": 16000,
+		"Rarity": 8,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 3
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 7
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 3,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Golden Age Charm",
+		"Description": "A talisman inscribed with the wisdom of an advanced culture. Offers a glimpse into an era of legends.",
+		"Level": 1,
+		"Price": 16000,
+		"Rarity": 8,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 3
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 8
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 5
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 3,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Golden Age Charm",
+		"Description": "A talisman inscribed with the wisdom of an advanced culture. Offers a glimpse into an era of legends.",
+		"Level": 1,
+		"Price": 16000,
+		"Rarity": 8,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 3
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 10
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 3,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	},
+	{
+		"Name": "Golden Age Charm",
+		"Description": "A talisman inscribed with the wisdom of an advanced culture. Offers a glimpse into an era of legends.",
+		"Level": 1,
+		"Price": 16000,
+		"Rarity": 8,
+		"SkillGroups": [
+			{
+				"SkillOrder": 1,
+				"GroupNum": 4
+			},
+			{
+				"SkillOrder": 2,
+				"GroupNum": 1
+			},
+			{
+				"SkillOrder": 3,
+				"GroupNum": 1
+			}
+		],
+		"PossibleSlotCombos": [
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			],
+			[
+				{
+					"SlotOrder": 1,
+					"SlotLevel": 1,
+					"DecoType": "Sword"
+				},
+				{
+					"SlotOrder": 2,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				},
+				{
+					"SlotOrder": 3,
+					"SlotLevel": 1,
+					"DecoType": "Armor"
+				}
+			]
+		]
+	}
+]

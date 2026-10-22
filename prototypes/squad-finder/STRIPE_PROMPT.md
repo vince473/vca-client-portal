@@ -1,12 +1,12 @@
 Wire up Stripe payments for Squad Finder™ using MY OWN Stripe account. Do NOT use Lovable's built-in "Enable payments" / Lovable-managed payments flow. The secret STRIPE_SECRET_KEY is already stored in project secrets; read it only in server-side functions, never in the browser.
 
 PRODUCTS (create them through the Stripe API from a one-time, idempotent setup function: look each product up by metadata.app = "squad_finder" and metadata.sku before creating, so running it twice never duplicates anything. Store the resulting price IDs in a stripe_prices table keyed by sku.)
-1. sku "squad_pass_monthly" — "Squad Pass", recurring $2.99 USD per month. Description: "Unlimited posts, pinned sessions, Squad Pass badge, custom vibe tags."
-2. sku "founder_lifetime" — "Founder Lifetime", one-time $9.99 USD. Description: "Lifetime Squad Pass and Founder badge. First 500 only."
+1. sku "squad_pass_monthly" — "Silver Seikret", recurring $2.99 USD per month. Description: "Unlimited posts, pinned sessions, priority for open spots, deeper filters, saved templates, Silver badge."
+2. sku "founder_lifetime" — "Founder Lifetime", one-time $9.99 USD. Description: "Silver Seikret for life and a Founder badge. First 500 only."
 
 CHECKOUT
 - Server function create-checkout(sku): requires a signed-in user; creates or reuses a Stripe Customer for the user (store stripe_customer_id on a billing_customers table, not editable from the client); creates a Checkout Session (mode "subscription" for squad_pass_monthly, mode "payment" for founder_lifetime) with client_reference_id = user id and metadata { user_id, sku }; success_url = <published url>/pass?status=success, cancel_url = <published url>/pass?status=cancelled. Return the URL; the browser redirects to it.
-- Before creating a founder_lifetime session, check server-side that fewer than 500 founders exist; if sold out, return a friendly error. Block founder checkout for users who are already founders, and block Squad Pass checkout for users with an active Squad Pass or Founder status.
+- Before creating a founder_lifetime session, check server-side that fewer than 500 founders exist; if sold out, return a friendly error. Block founder checkout for users who are already founders, and block Squad Pass checkout for users with an active Silver Seikret or Founder status.
 - Wire the Subscribe and Buy buttons on the pricing page to this (replace "Payments coming soon").
 
 WEBHOOK
