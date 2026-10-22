@@ -205,6 +205,8 @@ textarea.input{resize:vertical;min-height:64px}
 .onb-hero .h-big{font-size:52px}
 .onb-hero .h-big em{font-style:normal;color:var(--blood);text-shadow:0 0 22px rgba(224,16,46,.6)}
 
+.marks{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;color:var(--dim);opacity:.55;text-align:center}
+.brand sup{font-family:var(--f-mono);font-size:10px;color:var(--dim);opacity:.6;align-self:flex-start}
 .toast{position:absolute;left:16px;right:16px;bottom:80px;z-index:40;background:#1e1620;border:1px solid var(--volt);border-radius:10px;padding:11px 14px;font-size:14px;font-weight:600;box-shadow:0 10px 30px rgba(0,0,0,.6);transform:translateY(20px);opacity:0;transition:.25s;pointer-events:none}
 .toast.on{transform:none;opacity:1}
 
@@ -224,12 +226,13 @@ textarea.input{resize:vertical;min-height:64px}
   <aside class="map">
     <div class="brand">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#c9b6ff"/></svg>
-      <b>Squad<span>/</span>Finder</b>
+      <b>Squad<span>/</span>Finder</b><sup>™</sup>
     </div>
     <p class="about">Working prototype for review. Monster Hunter Wilds is the launch game. Everything here is sample data; nothing is sent anywhere.</p>
     <button class="walk" id="walk" type="button">Run the Wilds walkthrough<small>Post an Omega Planetes farm and watch a crossplay squad fill.</small></button>
     <h3 class="tip">Screens</h3>
     <nav class="screens" id="screens" aria-label="Screens"></nav>
+    <div class="marks" style="text-align:left">© ℗ 2026 VCA OS</div>
   </aside>
 
   <div class="device">
@@ -402,6 +405,7 @@ function vOnboard(){
     <div class="field"><span class="lbl">Step 2 · Pick your first game</span>
       <div class="panel row between"><div><b>Monster Hunter Wilds</b><div class="muted" style="font-size:13px">Crossplay · up to 4 hunters</div></div><span class="tag volt">Live</span></div></div>
     <button class="btn" data-act="go" data-to="board">${I.bolt} Enter the board</button>
+    <div class="marks">Squad Finder™ · © ℗ 2026 VCA OS</div>
   </div>`;
 }
 
@@ -421,7 +425,7 @@ function vBoard(){
       <button class="chip ghost" data-act="flt" data-v="mic" ${pressed(f.mic)}>Mic required</button>
       <button class="chip ghost" data-act="flt" data-v="spots" ${pressed(f.spots)}>2+ spots</button>
     </div>
-    ${list.length?list.map(card).join(''):`<div class="empty">No sessions match these filters.<br><button class="link" data-act="clearflt">Clear filters</button> or <button class="link" data-act="go" data-to="create">post your own</button></div>`}
+    ${list.length?list.map(card).join('')+'<div class="marks">© ℗ 2026 VCA OS</div>':`<div class="empty">No sessions match these filters.<br><button class="link" data-act="clearflt">Clear filters</button> or <button class="link" data-act="go" data-to="create">post your own</button></div>`}
   </div>`;
 }
 function card(s){
@@ -557,6 +561,7 @@ function vProfile(){
     </div></div>
     <div class="field"><span class="lbl">Recent hunts</span><div class="hist">${S.history.map(h=>`<div><span>${esc(h.t)}<br><span class="muted" style="font-size:12px">${h.d}</span></span><span class="rep">${h.r} rep</span></div>`).join('')}</div></div>
     <button class="btn alt" data-act="go" data-to="onboard">Edit linked platforms</button>
+    <div class="marks">Squad Finder™ · © ℗ 2026 VCA OS</div>
   </div>`;
 }
 
